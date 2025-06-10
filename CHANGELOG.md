@@ -9,8 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Initial documentation for core concepts
--   Support for time-based vulnerability assessment
+## [0.1.1] - 2025-06-10
+
+### Added
+
+- Support for loading custom region boundaries from GeoJSON files in HexagonGridGenerator
+
+### Improved
+
+- Updated documentation with examples of GeoJSON file usage
+- Enhanced hexagon grid generator with file validation and error handling
 
 ## [0.1.0] - 2025-03-13
 

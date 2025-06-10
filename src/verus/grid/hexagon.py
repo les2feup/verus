@@ -29,7 +29,7 @@ class HexagonGridGenerator(Logger):
     saved to disk.
 
     Attributes:
-        region (str): The region name for grid generation.
+        region (str): The region name for grid generation or path to GeoJSON file.
         edge_length (float): Length of each hexagon edge in meters.
         place_name (str): Simplified region name for file naming.
 
@@ -37,6 +37,10 @@ class HexagonGridGenerator(Logger):
         >>> generator = HexagonGridGenerator(region="Porto, Portugal")
         >>> grid = generator.run()
         >>> generator.save_to_geojson(grid)
+
+        >>> # Or with a GeoJSON file
+        >>> generator = HexagonGridGenerator(region="path/to/boundary.geojson")
+        >>> grid = generator.run()
     """
 
     def __init__(
@@ -52,6 +56,7 @@ class HexagonGridGenerator(Logger):
         ----------
         region : str
             Region to generate hexagon grid for (e.g. "Porto, Portugal")
+            or path to GeoJSON file with region boundary
         edge_length : int or float
             Length of each hexagon edge in meters
         verbose : bool
@@ -74,11 +79,59 @@ class HexagonGridGenerator(Logger):
 
         self.region = region
         self.edge_length = edge_length
-        self.place_name = region.split(",")[0].strip()
 
-        self.log(
-            f"Initialized grid generator for {self.region} with {edge_length}m edge length"
-        )
+        # If region is a file path, extract a place name from the filename
+        if os.path.isfile(region) and (
+            region.endswith(".geojson") or region.endswith(".json")
+        ):
+            self.is_file = True
+            self.place_name = os.path.splitext(os.path.basename(region))[0]
+            self.log(
+                f"Initialized grid generator for region from file: {os.path.basename(region)}"
+            )
+        else:
+            self.is_file = False
+            self.place_name = region.split(",")[0].strip()
+            self.log(
+                f"Initialized grid generator for {self.region} with {edge_length}m edge length"
+            )
+
+    def _get_region_gdf(self):
+        """
+        Get the GeoDataFrame for the region.
+
+        Returns
+        -------
+        geopandas.GeoDataFrame
+            GeoDataFrame containing the region boundary
+
+        Raises
+        ------
+        ValueError
+            If the region file cannot be loaded or geocoded
+        """
+        try:
+            if self.is_file:
+                # Load from GeoJSON file
+                self.log(f"Loading region boundary from file: {self.region}")
+                gdf = gpd.read_file(self.region)
+                if gdf.empty:
+                    raise ValueError(
+                        f"GeoJSON file contains no valid geometries: {self.region}"
+                    )
+                if gdf.crs is None:
+                    self.log(
+                        "Warning: CRS not defined in GeoJSON, assuming EPSG:4326",
+                        "warning",
+                    )
+                    gdf = gdf.set_crs("EPSG:4326")
+                return gdf
+            else:
+                # Geocode the region name
+                self.log(f"Geocoding region: {self.region}")
+                return geocoder.geocode_to_gdf(self.region)
+        except Exception as e:
+            raise ValueError(f"Failed to load region: {str(e)}")
 
     def generate_hex_grid(self, bbox, edge_length=None):
         """
@@ -431,7 +484,7 @@ class HexagonGridGenerator(Logger):
         Run the hexagonal grid generation process.
 
         This method handles the complete workflow of:
-        1. Getting the region boundary
+        1. Getting the region boundary (from name or file)
         2. Generating the grid
         3. Optionally adding values and colors
         4. Optionally clipping to the region
@@ -454,9 +507,9 @@ class HexagonGridGenerator(Logger):
             Generated hexagonal grid
         """
         try:
-            # Get the area GeoDataFrame
-            self.log(f"Processing region: {self.region}")
-            area_gdf = geocoder.geocode_to_gdf(self.region)
+            # Get the area GeoDataFrame using the new method
+            self.log("Processing region")
+            area_gdf = self._get_region_gdf()
 
             # Get bounding box
             bounding_box = area_gdf.bounds.iloc[0]  # minx, miny, maxx, maxy

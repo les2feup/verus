@@ -64,6 +64,14 @@ Generate a hexagonal grid for vulnerability zones:
     
     print(f"Created hexagonal grid with {len(hex_grid)} cells")
 
+You can also use a custom GeoJSON file to define the region boundary:
+
+.. code-block:: python
+
+    # Using a custom GeoJSON boundary file
+    grid_gen = HexagonGridGenerator(region="path/to/custom_boundary.geojson", edge_length=250)
+    hex_grid = grid_gen.run()
+
 Step 4: Perform Vulnerability Assessment
 ----------------------------------------
 
