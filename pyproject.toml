@@ -27,10 +27,6 @@ classifiers = [
     "Topic :: Scientific/Engineering :: GIS",
     "Topic :: Scientific/Engineering :: Information Analysis",
     "Topic :: Scientific/Engineering :: Visualization",
-    "Topic :: Scientific/Engineering :: Urban Science",
-    "Topic :: Scientific/Engineering :: Spatial Analysis",
-    "Topic :: Scientific/Engineering :: Clustering",
-    "Topic :: Scientific/Engineering :: Machine Learning",
 ]
 dependencies = [
     "numpy>=1.20.0",
