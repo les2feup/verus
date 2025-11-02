@@ -20,7 +20,8 @@ Comprehensive documentation is available at [https://les2feup.github.io/verus/](
 
 ## Publications
 
--   Bittencourt, J. C. N., Costa, D. G., Portugal, P., & Vasques, F. (2024). A data-driven clustering approach for assessing spatiotemporal vulnerability to urban emergencies. Sustainable Cities and Society, 108, 105477. <https://doi.org/10.1016/j.scs.2024.105477>
+-   Bittencourt, J. C. N., Costa, D. G., Portugal, P., Peixoto, M. L. M., & Vasques, F. (2025). On the spatiotemporal knowledge-driven vulnerability assessment of urban areas: A clustering-based approach. International Journal of Disaster Risk Reduction, 127, 105681. <https://doi.org/10.1016/j.ijdrr.2025.105681>
+
 
 ## Installation
 
@@ -104,5 +105,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
--   Research developed at the Laboratory of Emergent Smart Systems (LES2) at the Faculty of Engineering of University of Porto
+-   Research developed at the Laboratory of Emerging Smart Systems (LES2) at the Faculty of Engineering of University of Porto
 -   This work was supported by the Associate Laboratory Advanced Production and Intelligent Systems – ARISE LA/P/0112/2020 (DOI 10.54499/LA/P/0112/2020), by the Base Funding (UIDB/00147/2020) and Programmatic Funding (UIDP/00147/2020) of the R\&D Unit Center for Systems and Technologies -- SYSTEC, and by the Fundação para a Ciência e a Tecnologia (FCT) through the PhD scholarship (2024.02446.BD).
