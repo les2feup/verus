@@ -586,9 +586,20 @@ class DataExtractor(Logger):
             # For non-Point geometries, use their centroids for the filtering check
             mask = pois_for_filter.geometry.type != "Point"
             if mask.any():
-                pois_for_filter.loc[mask, "geometry"] = pois_for_filter.loc[
-                    mask
-                ].geometry.centroid
+                # Compute centroids in a projected CRS to avoid geographic centroid warning
+                orig_crs = pois_for_filter.crs
+                try:
+                    subset = pois_for_filter.loc[mask].copy()
+                    subset_proj = subset.to_crs(epsg=3857)
+                    subset_proj["geometry"] = subset_proj.geometry.centroid
+                    subset_back = subset_proj.to_crs(orig_crs)
+                    # Assign back the safe centroids in original CRS
+                    pois_for_filter.loc[mask, "geometry"] = subset_back.geometry.values
+                except Exception:
+                    # Fallback: if reprojection fails, proceed without centroid conversion
+                    pois_for_filter.loc[mask, "geometry"] = pois_for_filter.loc[
+                        mask
+                    ].geometry.centroid
 
             # Do the spatial filtering - keep only points inside or touching the buffer
             buffer_polygon = buffered_boundary.iloc[0].geometry

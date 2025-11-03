@@ -65,8 +65,8 @@ class KMeansHaversine(Logger):
             Tolerance for convergence.
         random_state : int, optional
             Random seed for reproducibility.
-        predefined_centers : ndarray, optional
-            Predefined initial centroids, required if init='predefined'.
+            predefined_centers : ndarray, optional
+                Predefined initial centroids, used if init='predefined' and not provided in run().
         verbose : bool
             Whether to print informational messages.
 
@@ -91,10 +91,7 @@ class KMeansHaversine(Logger):
         if not isinstance(tol, (int, float)) or tol <= 0:
             raise ValueError("tol must be a positive number")
 
-        if init == "predefined" and predefined_centers is None:
-            raise ValueError(
-                "Predefined centers must be provided when init='predefined'"
-            )
+            # Do not require predefined_centers at construction; validate only when needed
 
         self.n_clusters = n_clusters
         self.init = init
@@ -220,7 +217,7 @@ class KMeansHaversine(Logger):
         self.log("Using predefined centroids")
         if self.predefined_centers is None:
             raise ValueError(
-                "Predefined centers must be provided for this initialization method."
+                "Predefined centers must be provided for 'predefined' initialization, either via constructor or run()."
             )
         return np.array(self.predefined_centers)
 
