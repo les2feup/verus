@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+from typing import Any, cast
 
 # Add project root to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -30,11 +31,46 @@ if __name__ == "__main__":
     # Generate time windows for the entire week (in memory)
     time_windows = generator.generate_from_schedule()
 
+    # Also generate the combined DataFrame form and check consistency
+    combined_df = cast(Any, generator.generate_from_schedule(as_dataframe=True))
+
     # Print summary
     total_windows = sum(len(df) for df in time_windows.values())
     logger.log(
         f"Generated {total_windows} time windows for {len(time_windows)} POI types",
         level="success",
+    )
+
+    # Validate combined_df shape and columns
+    expected_cols = {"category", "vi", "ts", "te", "start_time", "end_time"}
+    missing_cols = expected_cols - set(combined_df.columns)
+    if missing_cols:
+        logger.log(f"Missing columns in combined_df: {missing_cols}", level="error")
+    assert not missing_cols, "Combined DataFrame is missing required columns"
+
+    # Validate total row count matches sum of dict-of-DFs
+    assert (
+        len(combined_df) == total_windows
+    ), f"Combined rows ({len(combined_df)}) != sum of dict rows ({total_windows})"
+    logger.log("Combined DataFrame row count matches dict-of-DFs", level="success")
+
+    # Validate categories coverage and per-category counts
+    dict_categories = set(time_windows.keys())
+    df_categories = set(combined_df["category"].unique())
+    assert (
+        dict_categories <= df_categories
+    ), f"Categories mismatch: dict keys {dict_categories} not subset of df {df_categories}"
+    logger.log(
+        "Combined DataFrame contains all categories from dict output", level="success"
+    )
+
+    for cat, df in time_windows.items():
+        cat_count_df = (combined_df[combined_df["category"] == cat]).shape[0]
+        assert cat_count_df == len(
+            df
+        ), f"Category {cat} count mismatch: combined={cat_count_df}, dict={len(df)}"
+    logger.log(
+        "Per-category counts match between dict and combined DataFrame", level="success"
     )
 
     # Example 2: Check which POIs are currently active

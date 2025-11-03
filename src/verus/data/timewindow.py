@@ -7,6 +7,7 @@ define when certain POI types are active and their vulnerability indices.
 
 import os
 from datetime import datetime, timedelta
+from typing import Any, Dict, List, Union, cast
 
 import pandas as pd
 
@@ -340,17 +341,32 @@ class TimeWindowGenerator(Logger):
             self.log(f"Error creating time window: {str(e)}", level="error")
             return None
 
-    def generate_from_schedule(self):
+    def generate_from_schedule(
+        self, as_dataframe: bool = False
+    ) -> Union[Dict[str, pd.DataFrame], pd.DataFrame]:
         """
         Generate time windows from predefined schedules.
 
+        Parameters
+        ----------
+        as_dataframe : bool, optional
+            When True, return a single combined pandas.DataFrame with a
+            "category" column (preferred for pipeline consumption).
+            When False (default), return the historical dict-of-DataFrames API,
+            keyed by POI type, for backward compatibility with existing scripts.
+
         Returns
         -------
-        dict of pandas.DataFrame
-            Dictionary mapping POI types to their time window DataFrames
+        dict[str, pandas.DataFrame] or pandas.DataFrame
+            - If as_dataframe is False (default): a dictionary mapping POI types
+              to their time window DataFrames.
+            - If as_dataframe is True: a single DataFrame with columns
+              ["category", "vi", "ts", "te", "start_time", "end_time"].
         """
-        # Dictionary to store time window dataframes by POI type
-        all_time_windows = {}
+        # Dictionary to store time window dataframes by POI type (legacy shape)
+        all_time_windows: Dict[str, pd.DataFrame] = {}
+        # Collector to optionally build a single combined DataFrame
+        combined_records: List[Dict[str, Any]] = []
 
         # Generate time windows for each POI type
         for poti_type, schedules in self.schedules.items():
@@ -398,7 +414,20 @@ class TimeWindowGenerator(Logger):
 
             # Convert list to DataFrame if we have any time windows
             if time_windows_list:
-                all_time_windows[poti_type] = pd.DataFrame(time_windows_list)
+                df_tw = pd.DataFrame(time_windows_list)
+                all_time_windows[poti_type] = df_tw
+                # Also append to combined output collector (normalize key to "category")
+                for rec in time_windows_list:
+                    combined_records.append(
+                        {
+                            "category": rec.get("poti_type", poti_type),
+                            "vi": rec["vi"],
+                            "ts": rec["ts"],
+                            "te": rec["te"],
+                            "start_time": rec.get("start_time"),
+                            "end_time": rec.get("end_time"),
+                        }
+                    )
                 self.log(
                     f"Created {len(time_windows_list)} time windows for {poti_type}"
                 )
@@ -408,6 +437,20 @@ class TimeWindowGenerator(Logger):
         self.log(
             f"Successfully generated time windows for {len(all_time_windows)} POI types"
         )
+
+        # Return either legacy dict or a single combined DataFrame
+        if as_dataframe:
+            if combined_records:
+                combined_df = pd.DataFrame(combined_records)
+                # Ensure column order for usability (keep as DataFrame)
+                cols = ["category", "vi", "ts", "te", "start_time", "end_time"]
+                combined_df = cast(pd.DataFrame, combined_df.loc[:, cols])
+                return combined_df
+            else:
+                # Empty but valid DataFrame with expected columns
+                return pd.DataFrame(
+                    columns=["category", "vi", "ts", "te", "start_time", "end_time"]
+                )
         return all_time_windows
 
     def get_active_time_windows(self, time_windows=None, timestamp=None):

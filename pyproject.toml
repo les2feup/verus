@@ -27,10 +27,6 @@ classifiers = [
     "Topic :: Scientific/Engineering :: GIS",
     "Topic :: Scientific/Engineering :: Information Analysis",
     "Topic :: Scientific/Engineering :: Visualization",
-    "Topic :: Scientific/Engineering :: Urban Science",
-    "Topic :: Scientific/Engineering :: Spatial Analysis",
-    "Topic :: Scientific/Engineering :: Clustering",
-    "Topic :: Scientific/Engineering :: Machine Learning",
 ]
 dependencies = [
     "numpy>=1.20.0",
@@ -88,3 +84,5 @@ where = ["src"]
 
 [tool.setuptools_scm]
 write_to = "src/verus/_version.py"
+version_scheme = "post-release"
+local_scheme = "no-local-version"
