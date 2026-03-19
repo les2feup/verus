@@ -9,6 +9,7 @@ _Vulnerability Evaluation for Resilient Urban Systems_
 ![OSMnx](https://img.shields.io/badge/OSMnx-1.1.1-blue?style=for-the-badge&logo=openstreetmap)
 ![Folium](https://img.shields.io/badge/Folium-0.12.1-green?style=for-the-badge&logo=folium)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen?style=for-the-badge)](https://les2feup.github.io/verus/)
+[![DOI](https://img.shields.io/badge/doi-10.5281/zenodo.19113788-yellow?style=for-the-badge)](https://doi.org/10.5281/zenodo.19113788)
 
 ## Description
 
