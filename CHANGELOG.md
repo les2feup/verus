@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added (Unreleased)
 
+### Fixed (Unreleased)
+
+-   `HexagonGridGenerator` now uses `pathlib.Path` for GeoJSON file detection, fixing a bug where relative file paths were not recognised as files when the Python working directory differed from the path base. Previously `os.path.isfile()` and `str.endswith()` were used; the new implementation uses `Path.expanduser().resolve().is_file()` and `Path.suffix`, making the check reliable regardless of the caller's CWD.
+
 ## [0.1.1] - 2025-06-10
 
 ### Added

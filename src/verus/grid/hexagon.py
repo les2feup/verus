@@ -7,6 +7,7 @@ for spatial analysis of Points of Interest (POIs).
 
 import math
 import os
+from pathlib import Path
 
 import folium
 import geopandas as gpd
@@ -77,21 +78,27 @@ class HexagonGridGenerator(Logger):
         if not isinstance(edge_length, (int, float)) or edge_length <= 0:
             raise ValueError("Edge length must be a positive number")
 
-        self.region = region
+        region_clean = region.strip()
+        self.region = region_clean
         self.edge_length = edge_length
 
-        # If region is a file path, extract a place name from the filename
-        if os.path.isfile(region) and (
-            region.endswith(".geojson") or region.endswith(".json")
+        # If region is a file path, extract a place name from the filename.
+        # Normalize the path first to avoid false negatives from whitespace
+        # and to make relative paths deterministic.
+        region_path = Path(region_clean).expanduser()
+        if (
+            region_path.suffix.lower() in {".geojson", ".json"}
+            and region_path.is_file()
         ):
             self.is_file = True
-            self.place_name = os.path.splitext(os.path.basename(region))[0]
+            self.region = str(region_path.resolve())
+            self.place_name = region_path.stem
             self.log(
-                f"Initialized grid generator for region from file: {os.path.basename(region)}"
+                f"Initialized grid generator for region from file: {region_path.name}"
             )
         else:
             self.is_file = False
-            self.place_name = region.split(",")[0].strip()
+            self.place_name = region_clean.split(",")[0].strip()
             self.log(
                 f"Initialized grid generator for {self.region} with {edge_length}m edge length"
             )
