@@ -239,9 +239,6 @@ class DataExtractor(Logger):
         pandas.DataFrame
             DataFrame with POIs and their attributes.
         """
-        # Clear OSM cache to ensure fresh data
-        self.clear_osm_cache()
-
         # Get or fetch region boundaries
         try:
             boundary, buffered_boundary = self.get_boundaries()
@@ -560,10 +557,16 @@ class DataExtractor(Logger):
             )
             self.log(f"Using timeout of {adjusted_timeout}s for {category}", "debug")
 
+            # Align osmnx HTTP timeout with the wrapper timeout so they don't
+            # conflict — the osmnx setting controls how long Overpass is allowed
+            # to run server-side and how long the HTTP connection waits.
+            ox.settings.requests_timeout = adjusted_timeout
+
             # Fetch POIs with timeout
             self.log(f"Fetching {category} POIs...", level="info")
             pois = self._fetch_features_with_timeout(
                 lambda: ox.features_from_polygon(polygon, tags=tags),
+                timeout=adjusted_timeout,
             )
 
             if pois is None or len(pois) == 0:
@@ -745,7 +748,7 @@ class DataExtractor(Logger):
             self.log(f"Error creating map: {str(e)}", level="error")
             return None
 
-    def _fetch_features_with_timeout(self, fetch_function):
+    def _fetch_features_with_timeout(self, fetch_function, timeout=None):
         """
         Execute a fetch function with a timeout.
 
@@ -753,20 +756,23 @@ class DataExtractor(Logger):
         ----------
         fetch_function : callable
             Function to execute with timeout
+        timeout : int, optional
+            Timeout in seconds. Defaults to self.fetch_timeout.
 
         Returns
         -------
         object or None
             Object returned by the fetch function or None on timeout/error
         """
+        effective_timeout = timeout if timeout is not None else self.fetch_timeout
         try:
             # Use the with_timeout decorator
-            timeout_func = with_timeout(self.fetch_timeout)(fetch_function)
+            timeout_func = with_timeout(effective_timeout)(fetch_function)
             result = timeout_func()
             return result
         except TimeoutException:
             self.log(
-                f"Fetch operation timed out after {self.fetch_timeout} seconds",
+                f"Fetch operation timed out after {effective_timeout} seconds",
                 level="error",
             )
             return None

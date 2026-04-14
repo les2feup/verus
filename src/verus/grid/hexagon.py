@@ -48,6 +48,8 @@ class HexagonGridGenerator(Logger):
         self,
         region="Porto, Portugal",
         edge_length=250,
+        use_h3=False,
+        h3_resolution=None,
         verbose=True,
     ):
         """
@@ -60,6 +62,12 @@ class HexagonGridGenerator(Logger):
             or path to GeoJSON file with region boundary
         edge_length : int or float
             Length of each hexagon edge in meters
+        use_h3 : bool, optional
+            If True, use the H3 library for grid generation instead of the
+            default manual tessellation. Default is False.
+        h3_resolution : int or None, optional
+            H3 resolution to use when use_h3 is True (0-15). If None, the
+            resolution is chosen automatically from edge_length.
         verbose : bool
             Whether to print log messages
 
@@ -78,9 +86,16 @@ class HexagonGridGenerator(Logger):
         if not isinstance(edge_length, (int, float)) or edge_length <= 0:
             raise ValueError("Edge length must be a positive number")
 
+        if h3_resolution is not None and not (
+            isinstance(h3_resolution, int) and 0 <= h3_resolution <= 15
+        ):
+            raise ValueError("h3_resolution must be an integer between 0 and 15")
+
         region_clean = region.strip()
         self.region = region_clean
         self.edge_length = edge_length
+        self.use_h3 = use_h3
+        self.h3_resolution = h3_resolution
 
         # If region is a file path, extract a place name from the filename.
         # Normalize the path first to avoid false negatives from whitespace
@@ -228,6 +243,143 @@ class HexagonGridGenerator(Logger):
             self.log(f"Failed to generate hexagonal grid: {str(e)}", "error")
             raise ValueError(f"Failed to generate hexagonal grid: {str(e)}")
 
+    def _choose_h3_resolution(self, edge_length):
+        """
+        Choose the H3 resolution whose average edge length is closest to edge_length.
+
+        Parameters
+        ----------
+        edge_length : float
+            Desired hexagon edge length in metres.
+
+        Returns
+        -------
+        int
+            H3 resolution (0-15).
+
+        Raises
+        ------
+        ImportError
+            If the h3 library is not installed.
+        """
+        try:
+            import h3
+        except ImportError:
+            raise ImportError(
+                "The h3 library is required for H3 grid generation. "
+                "Install it with: pip install h3"
+            )
+
+        best_res = 0
+        best_diff = float("inf")
+        for res in range(16):
+            avg_edge = h3.average_hexagon_edge_length(res, unit="m")
+            diff = abs(avg_edge - edge_length)
+            if diff < best_diff:
+                best_diff = diff
+                best_res = res
+        return best_res
+
+    def generate_hex_grid_h3(self, area_gdf, resolution=None):
+        """
+        Generate a hexagonal grid using the H3 library.
+
+        Fills the region boundary with H3 cells and converts each cell index
+        to a shapely Polygon. Cells are pointy-topped (H3 convention) rather
+        than the flat-topped hexagons produced by generate_hex_grid().
+
+        Parameters
+        ----------
+        area_gdf : geopandas.GeoDataFrame
+            GeoDataFrame containing the region boundary in EPSG:4326.
+        resolution : int or None, optional
+            H3 resolution (0-15). If None, the resolution is chosen
+            automatically from the instance's edge_length via
+            _choose_h3_resolution().
+
+        Returns
+        -------
+        geopandas.GeoDataFrame
+            GeoDataFrame with columns ``hex_id`` and ``geometry``
+            (shapely Polygons) in EPSG:4326.
+
+        Raises
+        ------
+        ImportError
+            If the h3 library is not installed.
+        ValueError
+            If grid generation fails.
+        """
+        try:
+            import h3
+        except ImportError:
+            raise ImportError(
+                "The h3 library is required for H3 grid generation. "
+                "Install it with: pip install h3"
+            )
+
+        if resolution is None:
+            resolution = self._choose_h3_resolution(self.edge_length)
+            avg_edge = h3.average_hexagon_edge_length(resolution, unit="m")
+            self.log(
+                f"Chosen H3 resolution {resolution} "
+                f"(avg edge length ≈{avg_edge:.0f}m) "
+                f"for target edge length {self.edge_length}m"
+            )
+        else:
+            self.log(f"Generating H3 hexagonal grid at resolution {resolution}")
+
+        try:
+            # Dissolve to a single boundary geometry in EPSG:4326
+            boundary = area_gdf.to_crs("EPSG:4326").dissolve()
+            boundary_geom = boundary.geometry.iloc[0]
+
+            # Use the bounding box of the AoI as the fill polygon for polygon_to_cells.
+            # This guarantees that every H3 cell overlapping the AoI is a candidate,
+            # regardless of whether its centroid falls inside a concave or narrow part
+            # of the boundary. A bounding box is fully convex so centroid containment
+            # never misses edge cells.
+            minx, miny, maxx, maxy = boundary_geom.bounds
+            bbox_outer = [
+                (maxy, minx), (maxy, maxx),
+                (miny, maxx), (miny, minx),
+                (maxy, minx),
+            ]
+            h3_bbox = h3.LatLngPoly(bbox_outer)
+            all_cells = set(h3.polygon_to_cells(h3_bbox, resolution))
+
+            self.log(f"Found {len(all_cells)} H3 cells in bounding box")
+
+            # Convert each H3 index to a shapely Polygon
+            geometries = []
+            hex_ids = []
+            for cell in all_cells:
+                # cell_to_boundary returns (lat, lng) pairs
+                boundary_coords = [(lng, lat) for lat, lng in h3.cell_to_boundary(cell)]
+                geometries.append(Polygon(boundary_coords))
+                hex_ids.append(cell)
+
+            hex_grid = gpd.GeoDataFrame(
+                {"hex_id": hex_ids, "geometry": geometries},
+                crs="EPSG:4326",
+            )
+
+            # Drop cells that don't touch the AoI at all (corners of the bounding box)
+            hex_grid = hex_grid[hex_grid.geometry.intersects(boundary_geom)].copy()
+            self.log(f"{len(hex_grid)} cells intersect the AoI boundary")
+
+            # Clip to the exact AoI outline so edge cells are cropped to the boundary
+            # shape rather than overhanging it.
+            hex_grid = gpd.clip(hex_grid, boundary.to_crs("EPSG:4326"))
+            hex_grid = hex_grid.reset_index(drop=True)
+            self.log(f"{len(hex_grid)} cells after clipping to exact boundary")
+
+            return hex_grid
+
+        except Exception as e:
+            self.log(f"Failed to generate H3 hexagonal grid: {str(e)}", "error")
+            raise ValueError(f"Failed to generate H3 hexagonal grid: {str(e)}")
+
     def assign_random_values(self, hex_grid, seed=None, min_val=0, max_val=1):
         """
         Assign random values to the hexagonal grid.
@@ -324,8 +476,8 @@ class HexagonGridGenerator(Logger):
                 area_gdf = geocoder.geocode_to_gdf(self.region)
 
             # Ensure both dataframes are in the same CRS
-            hex_grid = hex_grid.set_crs("EPSG:4326")
-            area_gdf = area_gdf.set_crs("EPSG:4326")
+            hex_grid = hex_grid.to_crs("EPSG:4326")
+            area_gdf = area_gdf.to_crs("EPSG:4326")
 
             self.log("Clipping grid to region boundaries")
             hex_grid_clipped = gpd.clip(hex_grid, area_gdf)
@@ -518,11 +670,15 @@ class HexagonGridGenerator(Logger):
             self.log("Processing region")
             area_gdf = self._get_region_gdf()
 
-            # Get bounding box
-            bounding_box = area_gdf.bounds.iloc[0]  # minx, miny, maxx, maxy
-
             # Generate the hexagonal grid
-            hex_grid = self.generate_hex_grid(bounding_box, self.edge_length)
+            if self.use_h3:
+                hex_grid = self.generate_hex_grid_h3(
+                    area_gdf, resolution=self.h3_resolution
+                )
+            else:
+                # Get bounding box for the manual tessellation method
+                bounding_box = area_gdf.bounds.iloc[0]  # minx, miny, maxx, maxy
+                hex_grid = self.generate_hex_grid(bounding_box, self.edge_length)
 
             # Add random values if requested
             if add_random_values:

@@ -186,6 +186,12 @@ class VERUS(Logger):
         """
         # Load POTIs DataFrame
         if potis_df is not None:
+            # Accept a file path as a convenience shortcut
+            if isinstance(potis_df, str):
+                import pandas as _pd
+                self.log(f"Loading POTIs from CSV: {potis_df}", level="info")
+                potis_df = _pd.read_csv(potis_df)
+
             # Validate POTIs DataFrame
             required_poti_columns = ["latitude", "longitude", "category"]
             missing_columns = [
@@ -222,6 +228,12 @@ class VERUS(Logger):
 
         # Load centroids DataFrame
         if centroids_df is not None:
+            # Accept a file path as a convenience shortcut
+            if isinstance(centroids_df, str):
+                import pandas as _pd
+                self.log(f"Loading centroids from CSV: {centroids_df}", level="info")
+                centroids_df = _pd.read_csv(centroids_df)
+
             # Validate centroids DataFrame
             required_centroid_columns = ["latitude", "longitude"]
             missing_columns = [
