@@ -13,12 +13,12 @@ jobs:
         permissions:
             contents: write
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v4.2.2
               with:
                   fetch-depth: 0
 
             - name: Set up Python
-              uses: actions/setup-python@v4
+              uses: actions/setup-python@v5
               with:
                   python-version: "3.10"
 
@@ -54,7 +54,7 @@ jobs:
 
             - name: Create GitHub Release
               if: steps.check_version.outputs.create_tag == 'true'
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v2
               with:
                   name: "Version ${{ steps.check_version.outputs.version }}"
                   tag_name: "v${{ steps.check_version.outputs.version }}"
