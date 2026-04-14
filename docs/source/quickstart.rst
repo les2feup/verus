@@ -27,34 +27,31 @@ Here's a minimal example that demonstrates the core functionality:
     extractor = DataExtractor(region="Porto, Portugal")
     poi_data = extractor.run()
     
-    # 2. Generate time windows
+    # 2. Generate time windows aligned with the evaluation week
     tw_gen = TimeWindowGenerator()
     time_windows = tw_gen.generate_from_schedule()
     
-    # 3. Create hexagonal grid
-    grid_gen = HexagonGridGenerator(region="Porto, Portugal", edge_length=250)
+    # 3. Create hexagonal grid using the H3 library
+    grid_gen = HexagonGridGenerator(region="Porto, Portugal", edge_length=250, use_h3=True)
     hex_grid = grid_gen.run()
     
     # 4. Initialize vulnerability assessor
-    config = {
-        "max_vulnerability": {"Porto": 0.0003476593149558199},
-    }
-    assessor = VERUS(place_name="Porto", config=config)
+    assessor = VERUS(place_name="Porto")
     
-    # 5. Load data
+    # 5. Load data (potis_df also accepts a CSV file path)
     assessor.load(
         potis_df=poi_data,
         time_windows_dict=time_windows,
         zones_gdf=hex_grid
     )
     
-    # 6. Run assessment
-    evaluation_time = tw_gen.to_unix_epoch("2025-03-13 17:30:00")
+    # 6. Run assessment (use a timestamp within the generated time windows week)
+    evaluation_time = tw_gen.to_unix_epoch("2026-04-14 17:30:00")
     results = assessor.run(evaluation_time=evaluation_time)
     
     # 7. Save results
     assessor.save("./results/")
-    assessor.visualize("./results/Porto_2025-03-13_17:30:00")
+    assessor.visualize()
 
 Follow this example in the project's notebooks folder.
 
