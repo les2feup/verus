@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed (Unreleased)
 
+## [1.2.0] - 2026-09-21
+
+### Changed
+
+-   **Vulnerability normalization uses a zero baseline** (changes results): `calculate_vulnerability_zones()` now computes `VL_normalized = value / max_vl` instead of `(value - min_vl) / (max_vl - min_vl)`. Zero means no influence, so zones keep their absolute level relative to the configured `max_vulnerability`, and scenarios evaluated with the same `max_vulnerability` stay comparable (min-max rescaled each scenario to its own minimum). `VL_normalized` and `VL_normalized_smoothed` values differ from 1.1.0 for the same inputs. Set `max_vulnerability` to at least the largest raw `value` over the scenarios being compared: a larger raw value gives `VL_normalized > 1`, and smoothing clips the zones it adjusts to [0, 1].
+
+### Fixed
+
+-   **vi carry-over between `run()` calls**: `run()` overwrites `poti_df` with the clustered POTIs of the evaluated time, and the next `run()` applied time windows to that output. Categories inactive at the new evaluation time kept the `vi` of the previous one, so scenarios evaluated in sequence on one `VERUS` instance differed from the same scenarios evaluated on fresh instances. `load()` now keeps a pristine copy of the POTIs, and time windows are always applied to it. Results from sequential runs on one instance may change: they now match fresh-instance runs.
+-   `run(data_source=df)` applied time windows to the loaded POTIs instead of `df`, so the DataFrame passed in was ignored whenever time windows were loaded. `_apply_time_windows_to_potis()` now takes a `potis_df` argument and `run()` passes the data it is evaluating.
+-   Regression tests in `test/test_time_window_carryover.py`.
+
 ## [1.1.0] - 2026-04-14
 
 ### Added

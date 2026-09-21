@@ -79,6 +79,9 @@ class VERUS(Logger):
 
         # Data containers (to be loaded from DataFrames)
         self.poti_df = None
+        # Pristine copy of the loaded POTIs; run() overwrites poti_df with the
+        # clustered, time-window-adjusted POTIs of the last evaluation time.
+        self._potis_input = None
         self.cluster_centers = None
         self.vulnerability_zones = None
         self.time_windows = None
@@ -223,6 +226,8 @@ class VERUS(Logger):
                 )
                 self.poti_df["cluster"] = 0
 
+            self._potis_input = self.poti_df.copy()
+
             # Log summary info
             self.log(f"Loaded {len(self.poti_df)} POTIs", level="info")
 
@@ -360,27 +365,35 @@ class VERUS(Logger):
             self.log("No valid time windows found in dictionary", level="warning")
             return False
 
-    def _apply_time_windows_to_potis(self, evaluation_time=None):
+    def _apply_time_windows_to_potis(self, evaluation_time=None, potis_df=None):
         """
         Apply time windows to update POTIs vulnerability indices based on evaluation time.
 
         Args:
             evaluation_time (str, optional): Time scenario to evaluate.
                 If None, will use all time windows.
+            potis_df (pd.DataFrame, optional): POTIs to update. Defaults to the
+                POTIs as loaded, never to the output of a previous run(), so
+                vi values do not carry over between evaluation times.
 
         Returns:
             pd.DataFrame: Updated POTIs DataFrame
         """
-        if self.poti_df is None:
+        if potis_df is None:
+            potis_df = (
+                self._potis_input if self._potis_input is not None else self.poti_df
+            )
+
+        if potis_df is None:
             self.log("No POTIs loaded to apply time windows", level="warning")
             return None
 
         if self.time_windows is None:
             self.log("No time windows loaded, using original vi values", level="info")
-            return self.poti_df.copy()
+            return potis_df.copy()
 
         # Make a copy of the POTIs DataFrame to modify
-        updated_df = self.poti_df.copy()
+        updated_df = potis_df.copy()
 
         # Filter time windows by evaluation time if provided
         filtered_tw = self.time_windows
@@ -687,8 +700,7 @@ class VERUS(Logger):
             axis=1,
         )
 
-        min_vl = zones["value"].min()
-        # Use the new config helper method
+        # Zero represents no influence; retain the configured city-wide maximum.
         max_vl = self._get_config("max_vulnerability", self.place_name)
         if max_vl is not None:
             self.log(f"Using configured max vulnerability: {max_vl}", level="info")
@@ -696,9 +708,9 @@ class VERUS(Logger):
             max_vl = zones["value"].max()
             self.log(f"Using calculated max vulnerability: {max_vl}", level="info")
 
-        self.log(f"Min VL: {min_vl}, Max VL: {max_vl}", level="info")
+        self.log(f"Normalization baseline: 0.0, Max VL: {max_vl}", level="info")
         zones["VL_normalized"] = zones["value"].apply(
-            lambda x: (x - min_vl) / (max_vl - min_vl) if max_vl > min_vl else 0.5
+            lambda x: x / max_vl if max_vl > 0 else 0.0
         )
 
         self.vulnerability_zones = zones
@@ -1132,8 +1144,11 @@ class VERUS(Logger):
                 # If data_source is already a DataFrame, use it directly
                 df = data_source.copy()
             else:
-                # Use the already loaded data
-                df = self.poti_df.copy() if self.poti_df is not None else None
+                # Use the data as loaded, not the output of a previous run()
+                loaded = (
+                    self._potis_input if self._potis_input is not None else self.poti_df
+                )
+                df = loaded.copy() if loaded is not None else None
 
             if df is None:
                 raise ValueError(
@@ -1151,7 +1166,7 @@ class VERUS(Logger):
                     f"Applying time windows for evaluation time: {evaluation_time}",
                     level="info",
                 )
-                df = self._apply_time_windows_to_potis(evaluation_time)
+                df = self._apply_time_windows_to_potis(evaluation_time, potis_df=df)
 
             # --- Execute the clustering pipeline (OPTICS -> KMeans) ---
             clusters_results = self._run_clustering_pipeline(
