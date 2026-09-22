@@ -940,10 +940,10 @@ class VERUS(Logger):
         )
         optics_results = optics.run(data_source=df)
 
-        # Check if OPTICS produced enough centroids
+        # Use whatever structure OPTICS found, even a single cluster
         if (
             optics_results["centroids"] is not None
-            and len(optics_results["centroids"]) > 1
+            and len(optics_results["centroids"]) >= 1
         ):
             centers = optics_results["centroids"]
             self.log(f"Running KMeans with {len(centers)} OPTICS centres", level="info")
@@ -967,13 +967,14 @@ class VERUS(Logger):
             # Add suffix information after the fact
             kmeans_results["algorithm_suffix"] = f"KM-OPTICS_{evaluation_time}"
         else:
-            # Fallback on default KMeans
+            # OPTICS found no density structure (fewer points than min_samples).
+            # Treat the POTIs as a single group instead of inventing a partition.
             self.log(
-                "OPTICS returned insufficient centres → defaulting to standard KMeans",
+                "OPTICS found no clusters → using a single cluster",
                 level="warning",
             )
             kmeans = KMeansHaversine(
-                n_clusters=min(8, len(df)),
+                n_clusters=1,
                 init="k-means++",
                 verbose=self.verbose,
                 random_state=42,

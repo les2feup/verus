@@ -9,17 +9,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added (Unreleased)
 
+### Fixed (Unreleased)
+
+## [1.1.2] - 2026-09-22
+
+### Added
+
 -   Experiment inputs are tracked in `data/`: POTI datasets (Porto, Lisbon, Paris), the article's time-window table, the continuous-occupancy time-window table (`time_windows_continuous_occupancy.csv`, named T1g in the multi-domain analysis) with its scenarios (`scenarios_activity_regimes.csv`), and the city boundaries. The article's experiments are tagged `ijdrr-article`.
 
-### Changed (Unreleased)
+### Changed
 
 -   **Experiment notebooks (`notebooks/experiments/01-03`) use the multi-domain analysis setup** (changes results): continuous-occupancy time-window table, four scenarios (Mon 08:30, Mon 11:00, Mon 21:00, Sat 11:00), a 100 m grid over the boundaries in `data/cities/`, and a static `max_vulnerability` per city equal to the largest raw vulnerability over the four scenarios. Maps are static images over CARTO Voyager tiles (`CARTO_API_KEY` environment variable) instead of folium maps, which kept the notebooks small.
 
-### Fixed (Unreleased)
+### Fixed
 
 -   **Only POTIs active at the evaluation time are clustered** (changes results): with time windows loaded, `run()` now passes only the POTIs with `vi > 0` to the OPTICS → K-means pipeline, as `GeOPTICS` does when it receives time windows. Before, `VERUS` called `GeOPTICS.run()` without time windows, so OPTICS clustered every POTI and found the same clusters at every evaluation time, and inactive POTIs counted in the number of POTIs that divides the vulnerability kernel of their cluster, diluting it. This behavior dates from the first version of the pipeline, so the IJDRR article's results and verus 1.1.1 results are affected. `run()` now returns an error when no POTI is active at the evaluation time, and `input_data` holds only the active POTIs. Regression tests in `test/test_active_clustering.py`.
--   The fallback K-means (when OPTICS finds fewer than two clusters) no longer asks for more clusters than there are POTIs.
+-   **The number of clusters always comes from the data**: a single OPTICS cluster used to be discarded in favour of a K-means with eight arbitrary clusters, which invented structure in small areas and in scenarios with few active POTIs. `run()` now keeps whatever OPTICS finds, and falls back to one cluster only when OPTICS finds nothing (fewer points than `min_samples`).
 -   README usage example referred to an undefined `tw_gen`.
+
+### Known limitations
+
+-   **A zone's vulnerability only counts the POTIs of its own cluster**, so the value drops abruptly at cluster boundaries: between neighbouring hexagons of different clusters the jump averages 2 to 4 times the jump inside a cluster (Porto and Lisbon, four scenarios), which is what `smooth_vulnerability()` patches afterwards. Dividing the kernel by the number of POTIs in the cluster also measures average influence rather than exposure, so a scenario with five times more activity does not read as five times more vulnerable. Letting every cluster within the kernel bandwidth (3σ) reach a zone, and summing instead of averaging, removes both effects and matches a plain kernel density of the activity (Spearman 1.00), at the cost of making the vulnerability field independent of the clustering. Planned for a future iteration.
 
 ## [1.1.1] - 2026-09-21
 

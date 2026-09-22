@@ -100,6 +100,39 @@ def test_no_active_potis_reports_error(data):
     assert result["vulnerability_zones"] is None
 
 
+def test_single_activity_group_is_not_split_into_eight(data):
+    """One dense group of POTIs must stay one cluster, not a made-up partition."""
+    _, _, zones = data
+    rng = np.random.default_rng(2)
+    blob = pd.DataFrame(
+        {
+            "latitude": 38.73 + rng.normal(0, 0.001, 12),
+            "longitude": -9.15 + rng.normal(0, 0.001, 12),
+            "category": "a",
+            "vi": 1.0,
+        }
+    )
+    result = _run(blob, zones)
+
+    assert len(result["centroids"]) <= 2
+
+
+def test_too_few_potis_for_optics_use_one_cluster(data):
+    """Below min_samples OPTICS finds nothing; a single group is the honest fallback."""
+    _, _, zones = data
+    blob = pd.DataFrame(
+        {
+            "latitude": [38.73, 38.731, 38.732],
+            "longitude": [-9.15, -9.151, -9.152],
+            "category": "a",
+            "vi": 1.0,
+        }
+    )
+    result = _run(blob, zones)
+
+    assert len(result["centroids"]) == 1
+
+
 def test_without_time_windows_all_potis_are_clustered(data):
     potis, _, zones = data
     result = _run(potis.assign(vi=1.0), zones)
