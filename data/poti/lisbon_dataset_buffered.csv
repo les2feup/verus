@@ -1,0 +1,777 @@
+latitude,longitude,category,name
+38.70855160000001,-9.2267992,school,Kids Paradise - Centro de Explicações
+38.76095010000002,-9.156509,school,Cambridge School
+38.76007880000001,-9.1941987,school,ISLA
+38.73568409999999,-9.155365000000002,school,"Externato ""A Ritinha"""
+38.75029420000001,-9.1921009,school,Centro da Questão
+38.745753300000004,-9.1531612,school,ELE Universidad de Salamanca
+38.7285831,-9.1400077,school,Escola Básica Rainha Dona Estefânia
+38.77583280000001,-9.1550709,school,Escola Básica Doutor Nuno Cordeiro Ferreira
+38.73179710000001,-9.1435961,school,Instituto para o Ensino e Formação
+38.723795100000004,-9.1459668,school,Instituto Cervantes
+38.73496159999999,-9.1476886,school,Wall Street English
+38.7278427,-9.1366593,school,Externato Infantil e Primário Passos Manuel
+38.7392799,-9.1815444,school,"Escola ""Casa da Floresta"""
+38.73410870000001,-9.147299,school,Externato ERGON
+38.733242,-9.1507507,school,Araik Galstyan Pt International Floral Design School
+38.70183709999999,-9.1877801,school,"CINEL - Centro de Formação Profissional da Indústria Electrónica, Energia, Telecomunicações e Tecnologias da Informação"
+38.7810231,-9.0960152,school,Happy Code
+38.77721789999999,-9.0937213,school,Brain Alive
+38.7772133,-9.0935004,school,Horizontes Criativos
+38.72607,-9.1625913,school,In Impetus - Escola de Atores
+38.7305605,-9.1389565,school,Colégio Sá de Miranda
+38.7294098,-9.163874,school,Montessori Bright Academy
+38.7258387,-9.1623052,school,Brave Generation Academy
+38.7260073,-9.1610426,school,Alliance Française Lisbonne
+38.73274200000001,-9.1625803,school,Escola Basica Mestre Querubim Lapa
+38.724397399999994,-9.1486082,school,N´Avózinha
+38.7205665,-9.1621769,school,Escola de Belas Artes e Centro de Ensino Pedro Serrenho
+38.7260374,-9.1584974,school,"Escola Profissional de Ciências Geográficas, Lisboa"
+38.7297983,-9.1397881,school,INETE - Instituto de Educação Técnica (Escola Profissional)
+38.75069289999998,-9.2003772,school,Escola Profissional de Estudos Técnicos
+38.7329779,-9.1402517,school,Colégio de Talentos
+38.7073515,-9.2068654,school,Escola Básica Moinhos do Restelo
+38.74749090000001,-9.2113262,school,EB1/JI Águas Livres
+38.74211330000001,-9.176268500000003,school,Centro Educativo Navarro de Paiva
+38.7518247,-9.1492049,school,Instituto de Educação e Desenvolvimento Profissional
+38.74422389999999,-9.1344555,school,Agrupamento de Escolas Luís de Camões
+38.7180384,-9.1671098,school,Happy Code Campo de Ourique
+38.7197643,-9.1565425,school,Colégio de Nossa Senhora da Conceição
+38.71901110000001,-9.1594368,school,"Colégio Place 4 All- creche, pré-escolar e primeiro ciclo"
+38.7566739,-9.0969938,school,Escola Profissional Agostinho Roseta
+38.744712400000004,-9.192029,school,Centro Integral de Adestramento Técnico-Eletrónico
+38.6992552,-9.1817309,school,Escola Profissional da Metropolitana
+38.7130825,-9.1304243,school,Escola Profissional de Artes Decorativas de Lisboa
+38.69898930000001,-9.205678,school,Centro de Educação e Desenvolvimento Pina Manique
+38.70547779999999,-9.1990691,school,Escola Privativa n.º 6 de A Voz do Operário
+38.7071797,-9.1897992,school,Escola Primária do Centro Cultural e Recreativo das Crianças do Cruzeiro e Rio-Seco
+38.6979053,-9.2192746,school,"Escola ""São Francisco Xavier"""
+38.763025,-9.1850431,school,Instituto para o Desenvolvimento Social
+38.75069620000001,-9.2002786,school,Externato Álvares Cabral
+38.7671834,-9.1637003,school,Externato PIM PAM PUM
+38.7811165,-9.1207299,school,Escola Profissional de Comércio de Lisboa
+38.704632,-9.1770518,school,"Externato ""A Promotora"""
+38.74073810000001,-9.1460988,school,Externato Novo Crisfal
+38.739468200000005,-9.1560738,school,"Externato ""Anita"""
+38.7398443,-9.1481075,school,Escola Profissional Profitecla
+38.7440969,-9.1483236,school,Escola Profissional de Tecnologia Digital
+38.71268510000001,-9.1759684,school,Escola Profissional da Cruz Vermelha Portuguesa
+38.71954010000001,-9.1182589,school,Escola Profissional Nicolau Breyner
+38.73506260000001,-9.1371354,school,Escola Profissional Almirante Reis
+38.71421700000001,-9.1243364,school,Atelier Paraíso
+38.7115736,-9.1338115,school,Escola Profissional Artes e Ofícios do Espectáculo - Chapitô
+38.7179081,-9.1616085,school,Escola do Grémio de Instrução Liberal de Campo de Ourique
+38.7158686,-9.1633465,school,Escola de Pedro Nunes
+38.72296330000001,-9.1512055,school,Escola Profissional de Pedagogia Social
+38.71129349999999,-9.156893,school,"Externato ""O Lar da Criança"""
+38.7076406,-9.1475701,school,Escola Profissional de Imagem
+38.707896,-9.140147100000002,school,Escola Profissional Bento de Jesus Caraça
+38.7087569,-9.139833600000001,school,Externato Paroquial Nossa Senhora da Conceição
+38.7245391,-9.1562068,school,Escola Profissional de Hotelaria e Turismo do Chiado
+38.7407484,-9.1460474,school,Externato Crisfal
+38.73058790000001,-9.1399179,school,Instituto de Educação Técnica
+38.7357911,-9.1480442,school,Nova Escola João de Deus Ramos
+38.7385631,-9.1464926,school,Externato Infante Dom Pedro
+38.73757319999999,-9.135617,school,Externato Nobel
+38.728515400000006,-9.1332155,school,Externato Escola da Restauração
+38.735028699999994,-9.1371249,school,Externato Marquês de Pombal
+38.73013319999999,-9.1297948,school,Externato de Nossa Senhora da Penha de França
+38.7325908,-9.127628,school,"Externato ""Santa Francisca"""
+38.719005700000004,-9.1254389,school,Centro Educativo da Bela Vista
+38.72695199999999,-9.1350903,school,Externato Séneca
+38.715546,-9.1293195,school,Escola Privativa n.º 1 de A Voz do Operário
+38.74677809999999,-9.1308564,school,Hapoy Place
+38.7300822,-9.130136,school,coopescola jardin infantes
+38.72897309999999,-9.1313944,school,Guardería externado mae de deus
+38.706092600000005,-9.1864699,school,Escola Francisco Arruda
+38.70596940000001,-9.1818653,school,Innovate Academy
+38.7062736,-9.1798435,school,escola básica raul lino
+38.7388857,-9.1032695,school,Encim Poço do Bispo
+38.71910299999999,-9.1665709,school,Redbridge International School
+38.728910600000006,-9.1088332,school,Cooperativa de Ensino Os Pioneiros
+38.7278567,-9.1436528,school,Iberlínguas Language School
+38.754610500000005,-9.1451005,school,Centro Infantil Lisboa II
+38.7688224,-9.0974592,school,Escola de condução
+38.760284500000004,-9.1915229,school,Centro social e paroquial de Carnide
+38.73092890125997,-9.149945071011762,school,Escola Básica de São Sebastião da Pedreira
+38.7261138121188,-9.132109893222031,school,Escola Básica Sampaio Garrido
+38.71234459292036,-9.146656619750088,school,"Escola Artística de Música do Conservatório Nacional, Lisboa"
+38.72472245934899,-9.11461686329607,school,Colégio Dona Maria Pia
+38.71757553189672,-9.170562494843045,school,Escola Básica Manuel da Maia
+38.69874279725062,-9.19499325783236,school,Colégio Dom Nuno Álvares Pereira
+38.70652157160126,-9.180011921926866,school,Escola Básica Raúl Lino
+38.70685010850963,-9.187440078323544,school,Escola Básica Francisco de Arruda
+38.70917784824858,-9.167797861983818,school,IDN
+38.70915691589287,-9.171000448163712,school,Escola Básica Fernanda de Castro
+38.77320184262712,-9.171074678983905,school,Real Colégio de Portugal
+38.74711308956559,-9.136162104857853,school,Escola Básica Teixeira de Pascoais
+38.74445753577598,-9.135216758376414,school,Escola Básica Luís de Camões
+38.74050920789295,-9.140295990157977,school,Escola Primária 154 Norte
+38.73907260523785,-9.139626692387882,school,Escola Básica de São João de Deus
+38.73031272562605,-9.142867139433937,school,Escola Secundária Camões
+38.77493347472922,-9.154262784992843,school,Escola Básica do Alto do Lumiar
+38.76996592195412,-9.16252231689027,school,Escola Secundária do Lumiar
+38.78279925781014,-9.149936776195823,school,Escola Básica da Alta de Lisboa
+38.747585027024265,-9.182479062864612,school,Externato Marista de Lisboa
+38.749066042840084,-9.18151912550738,school,Escola Básica Professor Delfim Santos
+38.716088624846634,-9.150695551927594,school,Instituto Britânico
+38.71037447464902,-9.145157250583212,school,Escola Básica Gaivotas
+38.7353333325206,-9.1458258221527,school,Colégio Académico
+38.73446903885946,-9.1377300883402,school,Escola Básica O Leão de Arroios
+38.73002250037699,-9.149455740445124,school,Escola Profissional de Comunicação e Imagem
+38.72027202501119,-9.138258722074868,school,Escola Básica n.º 1 de Lisboa
+38.74767641433768,-9.194027203038498,school,Escola Secundária José Gomes Ferreira
+38.74896744377793,-9.194261014309063,school,Escola Básica Pedro de Santarém
+38.74919838183793,-9.195731916803554,school,Escola Básica da Quinta de Marrocos
+38.73647567126302,-9.12704108292204,school,"Escola Artística António Arroio, Lisboa"
+38.739920380279024,-9.139490248882614,school,Escola Básica e Secundária Dona Filipa de Lencastre
+38.729691144356934,-9.146050768133877,school,"Escola Profissional de Artes, Tecnologias e Desporto"
+38.760399882336706,-9.20914149885711,school,Escola Básica de Alfornelos
+38.7325524461388,-9.212506534441754,school,Escola Luís Madureira
+38.755551450130724,-9.144398324138649,school,Escola Básica Eugénio dos Santos
+38.751490627428375,-9.134943260957671,school,Queen Elizabeth's School
+38.72673864486661,-9.127644850430347,school,Escola Básica Nuno Gonçalves
+38.726507732602705,-9.130880991146277,school,Escola Secundária Dona Luísa de Gusmão
+38.77317727107233,-9.157535321724911,school,Colégio de São João de Brito
+38.79073244688231,-9.152166721630962,school,Escola Básica 1 das Galinheiras
+38.73514970216778,-9.120729479481168,school,Escola Básica Engenheiro Duarte Pacheco
+38.73983771566747,-9.121763980068684,school,Escola Básica das Olaias
+38.73524675509472,-9.130087736412626,school,Escola Básica Actor Vale
+38.71613089854568,-9.127425560898178,school,Escola Básica e Secundária Gil Vicente
+38.699295792267954,-9.206529761086314,school,Centro Cultural Casa Piano
+38.75236150957554,-9.153624967075883,school,Colégio Moderno
+38.75316882346237,-9.154185231675564,school,"Jardim Infantil ""Pestalozzi"""
+38.74662628051917,-9.144779708119275,school,Escola Básica do Bairro de São Miguel
+38.75812405041428,-9.182945434923159,school,Colégio Militar
+38.7093114544672,-9.22594898227704,school,Escola Secundária de Miraflores
+38.76555511238889,-9.181915331515535,school,Jardim de infância da Horta Nova de Telheiras
+38.765980901541994,-9.182157484915697,school,Escola Básica Prista Monteiro
+38.76288650427444,-9.181856646767372,school,Externato da Luz
+38.75938396759519,-9.186522119738726,school,Escola Básica da Luz-Carnide
+38.75031751982686,-9.145873305869552,school,Escola Básica dos Coruchéus
+38.781698959930935,-9.1120537916597,school,Escola Básica da Portela
+38.75229715279573,-9.123834215520029,school,Escola Básica Luiza Neto Jorge
+38.744124756493925,-9.120730845480853,school,Escola Básica do Bairro do Armador
+38.71224889730931,-9.149267905846775,school,Escola Básica e Secundária Passos Manuel
+38.761057815635624,-9.153275233346786,school,Colégio de Santa Doroteia
+38.776312656501325,-9.116240291803104,school,Escola Básica de Santa Maria dos Olivais
+38.77074085195399,-9.110456280665733,school,Escola Básica de Piscinas
+38.79326077166288,-9.096571970228215,school,Colégio Pedro Arrupe
+38.773825289787105,-9.173717204938482,school,Colégio Manuel Bernardes
+38.78539826190384,-9.097148908661017,school,Colégio Oriente
+38.778268875167434,-9.093573373505349,school,Escola Básica Vasco da Gama
+38.73332172911946,-9.21410517883421,school,Escola Básica Almeida Garrett
+38.75397000951032,-9.147141852822953,school,Escola Básica Santo António
+38.77517750055435,-9.14990676787933,school,Escola Básica Padre José Manuel Rocha e Melo
+38.762710499284736,-9.167851335595364,school,Escola Básica de Telheiras
+38.75140009707993,-9.112626283708307,school,Escola Secundária Dom Dinis
+38.71271912068829,-9.201765820935492,school,Escola Básica Professor Manuel Sérgio
+38.7347829386749,-9.159071505599368,school,Escola Básica Marquesa de Alorna
+38.737977445857695,-9.129353586483004,school,"Colégio ""O Pelicano"""
+38.73549295837362,-9.135800937155963,school,Colégio do Sagrado Coração de Maria
+38.791489101354365,-9.150263044385122,school,Escola Básica Maria da Luz de Deus Ramos
+38.75763892041344,-9.135585980083818,school,Escola Secundária Padre António Vieira
+38.75267401572777,-9.135248854994655,school,Escola Básica Almirante Gago Coutinho
+38.755969764674354,-9.137416509772114,school,Escola Básica de São João de Brito
+38.7512768995828,-9.141140189708024,school,Escola Secundária Rainha Dona Leonor
+38.759745970449785,-9.151498481934416,school,Colégio São Vicente de Paulo
+38.756363619093364,-9.125340063977916,school,Colégio Valsassina
+38.79814586217739,-9.147616143261693,school,Escola Básica da Quinta das Mós
+38.75336634460385,-9.111368682877591,school,Escola Básica Manuel Teixeira Gomes
+38.75502073535548,-9.098318827452248,school,Escola Básica do Parque das Nações
+38.75609080294867,-9.167340533216093,school,Escola Básica Dom Luís da Cunha
+38.76409078264196,-9.111414025858663,school,Escola Secundária Eça de Queirós
+38.72115947172947,-9.128892412108799,school,Escola Básica Natália Correia
+38.72601887987673,-9.116830638497149,school,Escola Profissional de Hotelaria e Turismo de Lisboa
+38.748953672344385,-9.150271600756588,school,Escola Artística do Instituto Gregoriano de Lisboa
+38.7339448225039,-9.113865449312653,school,Escola Básica e Secundária Luís António Verney
+38.740693287682824,-9.11106323473468,school,Escola Básica de Marvila
+38.71382160900732,-9.145462283858226,school,Escola Básica Padre Abel Varzim
+38.713354477382495,-9.132741906512917,school,Escola Básica 1 Castelo
+38.721919207234656,-9.116438086611543,school,Escola Básica Professor Oliveira Marques
+38.71400295506499,-9.167668417392722,school,Oficinas de São José
+38.76122323541139,-9.115673298872393,school,Escola Básica dos Olivais
+38.72208664605849,-9.119108730000718,school,Escola Básica Patrício Prazeres
+38.755492598355126,-9.203648699767795,school,Escola Básica Jorge Barradas
+38.764041488102016,-9.12118143110659,school,Escola Básica Arco-Íris
+38.75602429330254,-9.141799797294873,school,Escola dos Mestres
+38.72438100271432,-9.163351387693076,school,Lycée Français Charles Lepierre
+38.70227161469659,-9.189236156832726,school,Escola Secundária Rainha Dona Amélia
+38.713004677503434,-9.167517373978068,school,Escola Básica e Secundária Josefa de Óbidos
+38.71367869611689,-9.165620463526023,school,Escola Básica Engenheiro Ressano Garcia
+38.70800737785365,-9.159800066062902,school,Colégio de Santa Maria
+38.733408160375355,-9.203680214883939,school,Escola Básica Arquitecto Gonçalo Ribeiro Telles
+38.766715685822604,-9.114892752928245,school,Escola Básica Fernando Pessoa
+38.76583475031146,-9.122048350014145,school,Jardim-Escola João de Deus dos Olivais
+38.70984602742285,-9.21367623242051,school,Escola Secundária do Restelo
+38.76862076543753,-9.174083200995883,school,Escola de Saúde Militar
+38.74538765108077,-9.180930482482365,school,Externato Fernão Mendes Pinto
+38.74531664534992,-9.18048000014119,school,CEBE - Cooperativa de Ensino de Benfica
+38.74728576458806,-9.2052389810174,school,Escola Básica do Parque Silva Porto
+38.759239982288946,-9.108812453057125,school,Escola Básica Sarah Afonso
+38.76744790607584,-9.121715297509105,school,Escola Básica Adriano Correia de Oliveira
+38.701306634427695,-9.217633321448512,school,Escola Básica do Bairro do Restelo
+38.71449869260548,-9.213984097133878,school,Escola Básica de Caselas
+38.707124098384895,-9.206758148916418,school,Escola Básica de Moinhos do Restelo
+38.70496522568925,-9.204195587403039,school,Escola Básica Paula Vicente
+38.74182239711463,-9.16220233880579,school,Escola Secundária D. Pedro V
+38.77429913897323,-9.118262385348778,school,Escola Básica Paulino Montez
+38.69522358833364,-9.211371276408304,school,Colégio do Bom Sucesso
+38.76812799829543,-9.20217499966293,school,Escola Secundária Braamcamp Freire
+38.758456171784964,-9.163502127647687,school,Escola Alemã de Lisboa
+38.757669704557664,-9.124647107353539,school,Escola Básica Damião de Góis
+38.73336917272685,-9.11493229028289,school,Escola Básica do Bairro Madre de Deus
+38.70951435512162,-9.192630519894044,school,Escola Básica Homero Serpa
+38.7678701397948,-9.166311308640157,school,Colégio Planalto
+38.76727601429892,-9.168334151244615,school,Escola Básica do Lumiar
+38.72054205959724,-9.120329852691416,school,Escola Básica Rosa Lobato Faria
+38.74518710242119,-9.15589997728104,school,Escola Básica Mestre Arnaldo Louro de Almeida
+38.75348222797542,-9.117316653928633,school,Escola Básica n.º 195 de Lisboa
+38.74501126360437,-9.11171845710962,school,Escola Básica do Condado
+38.745051664700846,-9.107230100502731,school,Escola Básica João dos Santos
+38.74752904167742,-9.105565867761314,school,Escola Básica Professor Agostinho da Silva
+38.758487914404185,-9.124754322807647,school,Escola Básica de Lóios
+38.76056883869307,-9.113573394127974,school,Escola Básica Alice Vieira
+38.76966821878154,-9.106237688000915,school,Escola Básica Viscondessa dos Olivais
+38.7713716352208,-9.102328311073475,school,Escola Básica Infante D. Henrique
+38.71180776399753,-9.158878525104875,school,"Colégio ""O Nosso Jardim"""
+38.712035915341474,-9.158341489956568,school,Escola Básica n.º 72 de Lisboa
+38.77782584596868,-9.144296465332241,school,Escola Básica Pintor Almada Negreiros
+38.78013720631172,-9.159207381309878,school,Escola Básica Eurico Gonçalves
+38.77077304877028,-9.162518751698776,school,Escola Básica Quinta dos Frades
+38.76934891498362,-9.163273446126954,school,Escola Básica Professor Lindley Cintra
+38.75973257309931,-9.171425159353747,school,Escola Básica n.º 1 de Telheiras
+38.75543208083793,-9.173626118120898,school,Escola Básica de Laranjeiras
+38.73284108353928,-9.162384896997317,school,Escola Básica Mestre Querubim Lapa
+38.74090668083391,-9.171759310769673,school,Escola Básica Frei Luís de Sousa
+38.7459395165798,-9.17793768190538,school,Escola Básica António Nobre
+38.72007615572174,-9.16770380995314,school,Escola Básica de Santo Condestável
+38.70369252731774,-9.185359102909727,school,Escola Básica de Santo Amaro
+38.76597136221548,-9.182118516193569,school,Escola básica Prista Monteiro
+38.76774329021146,-9.192343317023425,school,Escola Básica Professora Aida Vieira
+38.75007841968346,-9.209581521914368,school,Escola Básica Professor José Salvado Sampaio
+38.70310272794451,-9.194999609920298,school,Escola Básica Alexandre Herculano
+38.75924581155563,-9.098153427234838,school,Externato João XXIII
+38.75205967309926,-9.103186806826676,school,Colégio Cesário Verde
+38.759346734654834,-9.164781133544043,school,Colégio Mira Rio
+38.74223585296606,-9.197145913527002,school,Ajuda de Berço
+38.717143272974674,-9.159795900824447,school,Escola de Hotelaria e Turismo de Lisboa
+38.71667645710053,-9.1589523836966,school,Escola Secundária Pedro Nunes
+38.7796915920885,-9.114783015824308,school,Externato São Miguel Arcanjo
+38.79010778086169,-9.165200683475538,school,Escola Básica de Olival Basto
+38.747634131404155,-9.143634199053576,school,Colégio Eduardo Claparède
+38.71253888169486,-9.211649646885832,school,Colégio Helen Keller
+38.778195535161764,-9.104814848376424,school,Escola Básica Dr. Catela Gomes
+38.759202175493,-9.173704499508057,school,Escola Básica de São Vicente/Telheiras
+38.74285286779016,-9.175682727056016,school,Centro Protocolar de Formação Profissional para o Setor da Justiça
+38.71029624967536,-9.2163781016954,school,Externato de São José
+38.74215760113571,-9.180833440253597,school,Instituto dos Pupilos do Exército
+38.719160887861406,-9.141914180152712,school,Escola Básica de São José
+38.79238684555231,-9.143060286649115,school,Escola Secundária de Camarate
+38.747359204380125,-9.210980283176355,school,Escola Básica de Águas Livres
+38.77584750314571,-9.155302574950005,school,Escola Básica Dr. Nuno Cordeiro Ferreira
+38.761312092327934,-9.205356176464193,school,Escola Básica Orlando Gonçalves
+38.77288743834765,-9.19025580953757,school,Escola Básica da Serra da Luz
+38.767938854008094,-9.163195964254793,school,Cooperativa de Ensino Especial e Solidariedade Social
+38.76137391051498,-9.180879141125246,school,Escola Secundária Vergílio Ferreira
+38.69938920742147,-9.210698479187503,school,"Cooperativa ""A Torre"""
+38.76779636697766,-9.194016064429057,school,Escola Básica do Bairro Padre Cruz
+38.77793292205637,-9.094398477875123,school,Creche Ilha dos Amores
+38.75626875003739,-9.10760562673006,school,United Lisbon International School
+38.72229874020277,-9.143525166731068,school,Escola Básica Luísa Ducla Soares
+38.77021573853933,-9.107835347014117,school,Escola Secundária António Damásio
+38.78819858852316,-9.105914268822453,school,Escola Secundária de Sacavém
+38.721998037719175,-9.153037883216681,school,Escola Santa Isabel
+38.708403886846035,-9.21605085807457,school,PaRK International School
+38.70005995331178,-9.222550934899079,school,"Colégio ""As Descobertas"""
+38.696270423903194,-9.217760254277426,school,Academia Ten
+38.742410258366576,-9.197173560021898,school,"Externato Infantil e Primário ""O Beiral"""
+38.70800706165414,-9.207261270523265,school,"Externato ""As Descobertas"""
+38.730581160265,-9.171976618585797,school,Externato Educação Popular
+38.718847537036744,-9.166791303547846,school,Redbridge School
+38.778366132177155,-9.126231803287839,school,Externato Marcelino Champagnat
+38.792363857642826,-9.104839256132001,school,Escola Básica de Sacavém
+38.71685801941925,-9.155552871082204,school,Escola Básica Rainha Santa Isabel
+38.72661956367038,-9.125059331278736,school,Escola Básica Arquitecto Victor Palla
+38.75001522333704,-9.203805520715447,school,Externato Grão Vasco
+38.750454155668194,-9.203741349341714,school,Externato São Cristóvão de Benfica
+38.7648888885862,-9.199812661755164,school,Escola Básica Mello Falcão
+38.75773832909604,-9.209347416426668,school,Escola Básica Maria Irene Lopes de Azevedo
+38.76490097753339,-9.198428522774863,school,Jardim Infantil Popular da Pontinha (JIPP)
+38.75326459793908,-9.21384907600748,school,Escola Básica Santos Mattos
+38.71273906261988,-9.164599321966415,school,Escola Profissional de Agentes de Serviço e Apoio Social
+38.768401361860796,-9.160952862094074,school,Escola Profissional Gustave Eiffel
+38.77140964178929,-9.200226983658334,school,Escola Profissional Agrícola Dom Dinis
+38.7686409550454,-9.196549613911266,school,Escola Básica Dr. Mário Madeira
+38.70019325314167,-9.19464405881289,school,Escola Secundária Marquês de Pombal
+38.72633122356714,-9.157086665069267,school,Escola Secundária Maria Amália Vaz de Carvalho
+38.715182048606486,-9.125360963015238,school,Escola Básica de Santa Clara
+38.7131675982026,-9.132872427018423,school,Escola Básica do Castelo
+38.709572167010776,-9.139467762308767,school,Escola Básica Maria Barroso
+38.75139600747198,-9.130214746114708,school,Colégio Saint Daniel Brottier
+38.76073680427781,-9.129351923591262,school,Colégio Piloto Diese
+38.755742576558454,-9.205309328049744,school,Externato das Pedralvas
+38.70501701602222,-9.180208367094156,school,"Escola ""Ave Maria"""
+38.70706281130659,-9.195457618232032,school,Centro Bonny Stilwell
+38.701745501026046,-9.187834026850705,school,Escola Secundária Fonseca Benevides
+38.71076833393244,-9.194391251560333,school,Liga Portuguesa dos Deficientes Motores
+38.711974451946695,-9.202687923067696,school,Associação Portuguesa para as Perturbações do Desenvolvimento e Autismo
+38.69937859229078,-9.212810420184036,school,Escola Raiz
+38.69841027484675,-9.20985732267859,school,Centro de Educação e Desenvolvimento Jacob Rodrigues Pereira
+38.70461214929239,-9.213432696732493,school,Externato Alfredo Binet
+38.69762008159999,-9.218914420184332,school,Externato Santa Maria de Belém
+38.69551465042755,-9.216504840871124,school,Externato Alfred Binet
+38.697343160433014,-9.225039852756117,school,"Externato ""A Escolinha"""
+38.79509308756569,-9.15018363232592,school,"Jardim de Infância ""Mimá"""
+38.75967188395109,-9.167635066934416,school,Escola Técnica Psicossocial de Lisboa
+38.76438533941569,-9.156618272452379,school,"Externato ""O Poeta"""
+38.74771697986576,-9.165398719044914,school,Associação Infante de Sagres
+38.75446893675365,-9.17787806667173,school,Escola Profissional CEFAD
+38.766482730635474,-9.112870151950567,school,"Jardim Escola ""O Bosque"""
+38.77525002124102,-9.107651324634121,school,Lua Crescente
+38.732113595411036,-9.106999180768554,school,Escola Básica do 1º Ciclo e Jardim de Infância do Beato
+38.75062492666036,-9.13128022230534,school,Astória International School
+38.7401057503626,-9.165705757233237,school,Colégio de São Tomás
+38.74768774521185,-9.133689889046213,school,"Externato ""O Barquinho"""
+38.75351345867511,-9.137301100619927,school,"Externato ""Luso-Britânico"""
+38.75296681204334,-9.13394610851318,school,"Externato ""Os Fofinhos"""
+38.75968109623614,-9.130438326383981,school,Colégio N'Avózinha
+38.75370444324249,-9.131057397974342,school,Escola Profissional Magestil
+38.71063196664042,-9.167238072677753,school,Instituto da Imaculada para Pessoas com Necessidades Especiais
+38.719359070218175,-9.159244414685551,school,Colégio Place4all
+38.71516336578448,-9.155093879836375,school,Colégio Luso-Suíço
+38.72525503320801,-9.157992237514593,school,Externato do Parque
+38.72896086928925,-9.133872053277617,school,Escola Selecta Professor Doutor Amadeu Andrés
+38.728606529511325,-9.1315142167764,school,Externato Mãe de Deus
+38.730923688118246,-9.17454003103173,school,Externato n.º 1 da Educação Popular
+38.75279415244488,-9.131027915892462,school,Colégio São Daniel Brottier
+38.69688354469144,-9.223148477303281,school,Centro de Pedagogia Terapêutica Bola de Neve
+38.716208714032504,-9.158040418856375,school,Jardim Escola João De Deus - Estrela
+38.755918657817276,-9.136584699080691,school,Jardim Escola João De Deus - Alvalade
+38.72386039105542,-9.13485799875444,school,Associação Pró-Infância Santo António de Lisboa
+38.717236739846655,-9.152623393955503,school,Escola de Santa Teresa do Menino Jesus
+38.708207294157674,-9.146484885288128,school,The British School of Lisbon
+38.756721399999996,-9.1757319,hospital,Hospital da Luz Torres de Lisboa
+38.75704759999999,-9.1460979,hospital,Hospital Júlio de Matos
+38.7473338,-9.1618892,hospital,Consultas Externas Hospital Ambulatório
+38.7476653,-9.1610581,hospital,Centro de Ambulatório
+38.7751447,-9.1133227,hospital,Análises Clínicas Affidea Laboratórios - Olivais Norte
+38.7640846,-9.0969209,hospital,Cellulem Block
+38.7640782,-9.0968396,hospital,Kids & Nits
+38.72386310000001,-9.1613425,hospital,TejoMed
+38.7063191,-9.1675263,hospital,Cuf Infante Santo
+38.716706800000004,-9.1375638,hospital,Hospital de São José - Consultas Externas
+38.7282457,-9.1392979,hospital,Hospital Dona Estefania
+38.7221303,-9.1424365,hospital,Hospital de Santo Antonio dos Capuchos
+38.7398152,-9.1612369,hospital,Instituto Portugues Oncologia de Lisboa Francisco Gentil
+38.73424669999999,-9.1581368,hospital,Centro Clinico de Lisboa SAMS
+38.72387177361833,-9.144757912778193,hospital,Hospital Santa Marta
+38.75817628490437,-9.099211424588107,hospital,Hospital CUF Descobertas
+38.76524296300409,-9.160502204856284,hospital,Hospital Pulido Valente
+38.749256306387814,-9.177649497848535,hospital,Hospital dos Lusíadas
+38.74608915592846,-9.17500880727504,hospital,Hospital da Cruz Vermelha Portuguesa
+38.74817825638744,-9.160815095027463,hospital,Hospital Santa Maria
+38.72220233867431,-9.142467657616919,hospital,Hospital de Santo António dos Capuchos
+38.718139414670894,-9.137885927074928,hospital,Hospital de São José
+38.72873838793416,-9.139089144878746,hospital,Hospital Dona Estefânia
+38.75859845396185,-9.146903805828963,hospital,Parque de Saúde de Lisboa
+38.70736712882816,-9.21773902468882,hospital,Hospital São Francisco Xavier
+38.74111568284877,-9.15215955246491,hospital,Hospital Curry Cabral
+38.6933460830071,-9.22214769130836,hospital,Fundação Dona Anna de Sommer Champalimaud e Doutor Carlos Montez Champalimaud
+38.73980526319018,-9.161192364415069,hospital,Instituto Português Oncologia de Lisboa Francisco Gentil
+38.71361559073319,-9.145784733439228,hospital,Hospital Saint Louis
+38.705272323929336,-9.16886582999289,hospital,Hospital CUF Infante Santo
+38.73262512851025,-9.14743640133006,hospital,Maternidade Doutor Alfredo da Costa
+38.768166502807254,-9.11467410893697,hospital,Hospital do SAMS
+38.76715692849539,-9.175231335256049,hospital,Hospital das Forças Armadas - Pólo de Lisboa
+38.708648973832865,-9.141667486329714,hospital,Hospital da Ordem Terceira
+38.722152110388585,-9.144308502465984,hospital,Instituto de Oftalmologia Doutor Gama Pinto
+38.70345099292242,-9.173517990963727,hospital,Hospital CUF Tejo
+38.75619777357775,-9.192502248453055,hospital,Hospital da Luz Lisboa
+38.69950425356735,-9.187977061297932,hospital,Hospital de Egas Moniz
+38.73425232665523,-9.158177961512244,hospital,Centro Clínico de Lisboa do SAMS
+38.71257390590817,-9.150875038718821,hospital,Hospital de Jesus
+38.73325452703689,-9.132147912090096,hospital,Smile Up
+38.7289074,-9.1495671,university,ITS
+38.755224500000004,-9.1579699,university,Departamento de Engenharia Informática da Universidade de Lisboa
+38.755546700000004,-9.1581255,university,Departamento de Matemática da Universidade de Lisboa
+38.7181216,-9.1523843,university,Universidade Aberta
+38.7372006,-9.1468234,university,ISCAL
+38.74036749999999,-9.1505608,university,Faculdade de Ciências Sociais e Humanas da Universidade NOVA de Lisboa
+38.7541708,-9.1580933,university,Faculdade de Letras da Universidade de Lisboa
+38.752135100000004,-9.1551036,university,Faculdade de Psicologia da Universidade de Lisboa
+38.71278250000001,-9.1941573,university,Faculdade de Arquitetura de Universidade de Lisboa
+38.714585400000004,-9.1939214,university,Faculdade de Medicina Veterinária de Universidade de Lisboa
+38.732719100000004,-9.1604111,university,"Universidade Nova de Lisboa (Nova IMS, Nova FCSH, New School of Law)"
+38.748526,-9.1533807,university,ISCTE
+38.74788459999999,-9.1560315,university,Faculdade de Farmácia da Universidade de Lisboa
+38.70766403750434,-9.182359942269203,university,Instituto Superior de Agronomia
+38.72431455403085,-9.145679350484244,university,Universidade Autónoma de Lisboa Luís de Camões
+38.71320619796449,-9.197490035170283,university,Instituto Superior de Ciências Sociais e Políticas
+38.7128214671066,-9.194055130423662,university,Faculdade de Arquitectura da Universidade de Lisboa
+38.71483092061802,-9.194091519817489,university,Faculdade de Medicina Veterinária da Universidade de Lisboa
+38.749065279386535,-9.165963963836662,university,Universidade Católica Portuguesa Lisboa
+38.73677956920588,-9.13873474940713,university,Instituto Superior Técnico
+38.71955921355404,-9.13923636469359,university,NOVA Medical School
+38.749374560073875,-9.19356120721068,university,Instituto Politécnico de Lisboa
+38.69865042527476,-9.1923506656126,university,Universidade Lusíada de Lisboa
+38.74025997971112,-9.151464623771599,university,Faculdade de Ciências Sociais e Humanas - Universidade Nova de Lisboa
+38.78116482423086,-9.120707047314923,university,Escola de Comércio de Lisboa
+38.73318882690255,-9.16068678154912,university,Universidade NOVA de Lisboa - Campus de Campolide
+38.746499432218336,-9.194616362658154,university,Campus do Instituto Politécnico de Lisboa - Benfica
+38.76008864200329,-9.194156132595571,university,Universidade Europeia
+38.75624467922208,-9.156685277083048,university,Faculdade de Ciências da Universidade de Lisboa
+38.75811646893424,-9.151839369070169,university,Universidade Lusófona de Humanidades e Tecnologias
+38.74858770968574,-9.153623430322186,university,ISCTE - Instituto Universitário de Lisboa
+38.775985580937764,-9.098225778928297,university,Complexo Escolar da ESTeSL/ESEL
+38.73726882336132,-9.146830804802681,university,Instituto Superior de Contabilidade e Administração de Lisboa
+38.76885286812584,-9.160407569276591,university,Campus Académico do Lumiar
+38.75236549608464,-9.156536066905621,university,Universidade de Lisboa - Cidade Universitária
+38.71051079783214,-9.155441001621345,university,Instituto Superior de Economia e Gestão
+38.74889746185378,-9.15210973137628,university,Colégio Universitário Pio XII
+38.75617397604773,-9.116355625892572,university,Instituto Superior de Engenharia de Lisboa
+38.70043466796039,-9.186652046423335,university,Instituto de Higiene e Medicina Tropical (IHMT-NOVA)
+38.70904430937831,-9.14069877198721,university,Faculdade de Belas-Artes da Universidade de Lisboa
+38.704095333636054,-9.178220510351563,university,Instituto Superior de Ciências Policiais e Segurança Interna
+38.7432917,-9.1391337,mall,Acqua Roma
+38.7502979,-9.1720593,mall,Atlanta Park Galerias
+38.7424529,-9.1460643,mall,Galeria Comercial Campo Pequeno
+38.7258756,-9.1478309,mall,Galerias Marquês de Pombal
+38.720226600000004,-9.1446073,mall,Tivoli Fórum
+38.753929299999996,-9.1408887,mall,Galeria Alvalade
+38.750745,-9.1976296,mall,Galeria Uruguai
+38.7669477,-9.1537076,mall,pingo doce
+38.722757400000006,-9.1518952,mall,Shopping Place
+38.7278989,-9.1451663,mall,Centro Comercial Sol
+38.7623828,-9.1570417,mall,Centro Comercial da Stromp
+38.76844750000001,-9.1572101,mall,Moura
+38.72846470000001,-9.1097184,mall,Galeria Comercial
+38.72324474450878,-9.162138691251188,mall,Amoreiras Shopping Center
+38.72134062825433,-9.161432983494585,mall,Amoreiras Square
+38.7548760349076,-9.188773633420688,mall,Centro Comercial Colombo
+38.71097550694832,-9.139367579019984,mall,Armazéns do Chiado
+38.72262051731844,-9.160729589330113,mall,Amoreiras Plaza
+38.73191354562801,-9.145304947775902,mall,Saldanha Residence
+38.73286889861702,-9.144711708081989,mall,Atrium Saldanha
+38.71670041203864,-9.136689319654106,mall,Centro Comercial Martim Moniz
+38.71639746690621,-9.13542448627324,mall,Centro Comercial Mouraria
+38.73085575406191,-9.148298751877888,mall,Picoas Plaza
+38.7494512332481,-9.117616956581795,mall,Centro Comercial Pingo Doce Bela Vista
+38.74855035288719,-9.190747881378202,mall,Fonte Nova
+38.77219369023372,-9.160305676032621,mall,Centro Comercial do Lumiar
+38.76469582767468,-9.175110851890585,mall,Centro Comercial Telheiras
+38.76120148682269,-9.159536827375522,mall,Centro Comercial Alvaláxia
+38.75328643959453,-9.145037827764124,mall,Centro Comercial de Alvalade
+38.71131464319994,-9.142561476519942,mall,Espaço Chiado
+38.69305578714793,-9.213482766831284,mall,Vela Latina
+38.76770007054828,-9.09681329314339,mall,Centro Comercial Vasco da Gama
+38.762298522647576,-9.11493070187172,mall,Spacio Shopping
+38.763182156301134,-9.152676282173793,mall,Galeria Quinta do Lambert
+38.75388430847871,-9.20520902145457,mall,Centro Comercial das Pedralvas
+38.76854766568873,-9.157140577951477,mall,Mouras Shopping Center
+38.7340704536943,-9.1467017855933,mall,Península Galerias
+38.7824375437049,-9.111198028798622,mall,Centro Comercial da Portela
+38.73924978669468,-9.125005097177768,mall,Centro Comecial das Olaias
+38.69747949999999,-9.2033202,attraction,Pastéis de Belém
+38.69222309999999,-9.2139417,attraction,Primeira Travessia Aérea do Atlântico Sul
+38.7432354,-9.1707117,attraction,Comboio do Zoo
+38.708035699999996,-9.139196,attraction,Pelourinho de Lisboa
+38.706649199999994,-9.136115,attraction,Cais das Colunas
+38.710297,-9.129522,attraction,Geomonumento da Rua da Judiaria
+38.709946300000006,-9.1342384,attraction,Casa de Pasto Estrela da Sé
+38.70872620000001,-9.1480792,attraction,Bica dos Olhos
+38.71364820000001,-9.1320309,attraction,Torre da Igreja
+38.7100633,-9.1339301,attraction,Flowerwall
+38.74327039999999,-9.1711608,attraction,Vale dos Tigres
+38.74453599999999,-9.1706392,attraction,Tigres Brancos
+38.7114622,-9.1897899,attraction,Banco de Junot
+38.711922200000004,-9.1408376,attraction,Largo do Carmo
+38.74434419999999,-9.1703226,attraction,Rinocerontes Brancos
+38.74414650000001,-9.1707578,attraction,Pequenos Primatas
+38.743807100000005,-9.1704214,attraction,Ilha dos Macacos
+38.742928000000006,-9.1715755,attraction,"Áxis, Veado-da-birmânia"
+38.7428199,-9.1717875,attraction,Bongos
+38.7429417,-9.1718465,attraction,"Mara, Agouti"
+38.74325879999999,-9.1718274,attraction,Koalas e Cangurus
+38.742841,-9.1724858,attraction,Bisonte-americano
+38.7429355,-9.1726818,attraction,Búfalos
+38.74297900000001,-9.172862,attraction,Tartaruga-gigante-de-aldabra
+38.743135699999996,-9.1724443,attraction,Aligátor-americano
+38.743374400000015,-9.172159,attraction,Rinocerontes-indianos
+38.74352609999999,-9.1724172,attraction,Suricatas
+38.744016,-9.1725065,attraction,Girafas
+38.7440669,-9.1721574,attraction,Muntjac-chinês
+38.74379220000001,-9.1720426,attraction,Órix-austral
+38.7442037,-9.1720043,attraction,Panda-vermelho-do-nepal
+38.744425,-9.1725352,attraction,"Lémures, Hipopótamo-pigmeu"
+38.7444312,-9.172151,attraction,Ilha dos Lémures
+38.7447806,-9.1729194,attraction,Elefantes-africanos
+38.7450277,-9.1724427,attraction,Leões
+38.74471940000001,-9.1724379,attraction,Flamingo-rubro
+38.744687000000006,-9.1720059,attraction,Hipopótamos
+38.7447904,-9.171235,attraction,Chimpanzé
+38.744739200000005,-9.1712232,attraction,"Colobo-guereza-kikuyu, Gorila-ocidental-das-terras-baixas"
+38.744963,-9.1706668,attraction,Pumas
+38.7450389,-9.1710972,attraction,Serval
+38.7451831,-9.1709506,attraction,Leopardo-da-pérsia
+38.7452328,-9.1712997,attraction,Leopardo-das-neves
+38.7453273,-9.1711546,attraction,Lince-euro-asiático
+38.7453845,-9.170539300000002,attraction,Babuíno-hamadrias
+38.7455325,-9.1707593,attraction,"Adaxes, Cobos-de-leche"
+38.7455113,-9.171632900000002,attraction,Elandes
+38.7455176,-9.1720346,attraction,Órix-de-cimitarra
+38.74574259999999,-9.1719899,attraction,Palanca-ruana
+38.745702800000004,-9.1725845,attraction,Palanca-negra
+38.745465300000006,-9.1727152,attraction,Chitas
+38.7453186,-9.1734342,attraction,Okapis
+38.71273529999999,-9.135544200000002,attraction,Capela dos Mirandas
+38.743640000000006,-9.198893,attraction,Baloiço do Bairro de Benfica
+38.71845050000001,-9.1554711,attraction,Street art - Draw & Ergo Bandits
+38.7286176,-9.1845906,attraction,Restaurante Panorâmico de Monsanto
+38.772991899999994,-9.1035829,attraction,Colectivo Rua - Mural
+38.7724903,-9.1029336,attraction,Rocket01 street art mural
+38.74225400000001,-9.1009575,attraction,Mural dos tubarões de Marvila
+38.75610970711646,-9.153277441493204,attraction,Lago do Campo Grande
+38.76631496053058,-9.095009341752865,attraction,Pavilhão de Portugal
+38.7146822383096,-9.12748539461145,attraction,Igreja de São Vicente de Fora
+38.71384471743323,-9.133472737675639,attraction,Castelo de São Jorge
+38.70708927104552,-9.167378831724493,attraction,Geomonumento da Av. Infante Santo
+38.74257651054392,-9.145208139810835,attraction,Praça de Touros do Campo Pequeno
+38.70956007036012,-9.182791790282739,attraction,Posto Meteorológico
+38.698156874166145,-9.200722346716462,attraction,Palácio Nacional de Belém
+38.69744038583193,-9.200490778411153,attraction,Chafariz do Palácio de Belém
+38.71496541419172,-9.124678921057608,attraction,Panteão Nacional
+38.69159398950076,-9.21592332345244,attraction,Torre de Belém
+38.7679051046198,-9.09183901416577,attraction,Teleférico do Parque das Nações
+38.737298183060666,-9.154782049625798,attraction,Fundação Calouste Gulbenkian
+38.74417697461308,-9.170985117508938,attraction,Teleférico do Jardim Zoológico de Lisboa
+38.70844199509335,-9.136815048677432,attraction,Arco do Triunfo da Rua Augusta
+38.743888144834635,-9.171837480754986,attraction,Impala-de-face-negra
+38.74397677499616,-9.171034207542737,attraction,Aldeia dos Macacos
+38.70996305103444,-9.133682420132153,attraction,Igreja de Santo António de Lisboa
+38.71017567734864,-9.14287972617939,attraction,Igreja de Nossa Senhora da Encarnação
+38.71316785391366,-9.160542013659448,attraction,Basílica da Estrela
+38.711435797155886,-9.148265118771098,attraction,Igreja de Santa Catarina
+38.71085320951259,-9.1427726514993,attraction,Igreja do Loreto
+38.711875797517855,-9.13031528021735,attraction,Igreja de São Brás e de Santa Luzia
+38.72083092794,-9.14867981796511,attraction,Cinemateca
+38.71211460002512,-9.139377800015891,attraction,Elevador de Santa Justa
+38.70376135000085,-9.155398549992633,attraction,Urban Beach
+38.74004576860576,-9.18047527599734,attraction,Palácio Fronteira
+38.76838726201531,-9.092278355839449,attraction,Lago das Tágides
+38.69361129425119,-9.20569851956319,attraction,Padrão dos Descobrimentos
+38.71240760368345,-9.204235801035775,attraction,Cozinhas d´El Rei
+38.71987480319747,-9.119954850177777,attraction,Estação Elevatória a Vapor dos Barbadinhos
+38.70134342019405,-9.213653052194374,attraction,Capela de São Jerónimo
+38.70808770685816,-9.196444374747552,attraction,Torre da Paroquial
+38.719625670263426,-9.19922095297351,attraction,Pedreira dos Catos
+38.7372909274313,-9.13048351750997,attraction,Fonte Monumental da Alameda
+38.69262628575497,-9.22255553371623,attraction,Espelho de água
+38.71580226897157,-9.161433510071793,attraction,Convento de Santo Elói
+38.74517818598985,-9.145872956222371,attraction,Chafariz de Entrecampos
+38.743016741891765,-9.17351112501679,attraction,Chafariz de Santo António da Convalescença
+38.71626595743184,-9.169626811139683,attraction,Geomonumento da Rua Sampaio Bruno
+38.75296499098792,-9.172153043592925,attraction,Geomonumento da Rua Virgílio Correia
+38.762593052205325,-9.151388403757359,attraction,Geomonumento da Quinta do Lambert
+38.72397787514667,-9.116590307285412,attraction,Geomonumento do Forte de Santa Apolónia
+38.719919349843366,-9.135752701574155,attraction,Chafariz do Intendente
+38.70972635696553,-9.129484471913766,attraction,Chafariz d'El Rei
+38.716977422486835,-9.147070200929354,attraction,Chafariz da Mãe d'Água
+38.750457077251504,-9.200975406901543,attraction,Chafariz de Benfica
+38.744948618398695,-9.16872354932023,attraction,Chafariz das Laranjeiras
+38.694075976169096,-9.177732978642512,attraction,Ponte 25 de Abril
+38.78009040223771,-9.094248777055155,attraction,69 Homens de Bessines
+38.70525165441854,-9.170437100000418,attraction,Chafariz da Praça da Armada
+38.70652757985011,-9.171615224182663,attraction,Chafariz das Necessidades
+38.70875328249475,-9.165911428667188,attraction,Chafariz das Terras
+38.70891645881148,-9.153530202598908,attraction,Chafariz da Esperança
+38.70773849528663,-9.14478406914821,attraction,Chafariz de São Paulo
+38.7152334716955,-9.144375487303249,attraction,Chafariz de São Pedro de Alcântara
+38.715622632342416,-9.151599900806977,attraction,Chafariz da Praça das Flores
+38.71710334999979,-9.154336399998543,attraction,Chafariz da Rua do Arco a São Mamede
+38.7199350526864,-9.154067057920388,attraction,Chafariz do Largo do Rato
+38.72413380000237,-9.16542899999543,attraction,Chafariz do Alto do Carvalhão
+38.74075420106609,-9.180380816683629,attraction,Chafariz de São Domingos de Benfica
+38.74235235000172,-9.20323544999824,attraction,Chafariz da Buraca
+38.72138470006602,-9.138839898934853,attraction,Chafariz do Largo do Mastro
+38.73108700000025,-9.150471749998326,attraction,Chafariz de São Sebastião da Pedreira
+38.702644775070596,-9.202551360670611,attraction,Chafariz da Boa Memória
+38.70315140000065,-9.19422250000051,attraction,Chafariz da Boa Hora
+38.71247641771174,-9.168291025189925,attraction,Chafariz da Fonte Santa
+38.69819980333959,-9.190357815212105,attraction,Chafariz da Junqueira
+38.76039568292958,-9.184893741519884,attraction,Santuário da Nossa Senhora da Luz
+38.73022081694002,-9.130923150890542,attraction,Chafariz da Penha de França
+38.711001436306816,-9.129572881630109,attraction,Chafariz das Escadinhas de São Miguel
+38.71388086072414,-9.164107261807661,attraction,Chafariz da Travessa do Patrocínio
+38.727408779009885,-9.147799509242807,attraction,Chafariz de Andaluz
+38.73022127167498,-9.16242463734558,attraction,Chafariz de Campolide
+38.75981090000035,-9.19069455000012,attraction,Chafariz de Carnide
+38.73432109999993,-9.128034550000015,attraction,Chafariz do Alto do Pina
+38.71125215944955,-9.134119693107456,attraction,Chafariz do Caldas
+38.71177975,-9.1303456,attraction,Chafariz do Jardim Júlio de Castilho
+38.70421611363372,-9.200374187166936,attraction,Chafariz do Largo da Paz
+38.71147808857831,-9.130450071968387,attraction,Chafariz do Miradouro de Santa Luzia
+38.75351469999977,-9.105563299999154,attraction,Chafariz na Rua do Vale Formoso de Cima
+38.731661696374815,-9.140869555702132,attraction,Fonte do Neptuno
+38.71523730084359,-9.1604374457142,attraction,Lago O Despertar
+38.70404939458318,-9.191456818394613,attraction,Chafariz do Rio Seco
+38.70462278966968,-9.177552581714252,attraction,Chafariz do Largo do Calvário
+38.7502936793725,-9.128695825399085,attraction,Geomonumento do Parque da Bela Vista
+38.77522336441999,-9.122540347423788,attraction,Geomonumento da Rua dos Eucaliptos
+38.728468662938106,-9.16943208341732,attraction,Geomonumento da Avenida Calouste Gulbenkian
+38.731003500510624,-9.176524586535738,attraction,Geomonumento do Parque da Pedra
+38.7222545389014,-9.169941363163478,attraction,Geomonumento da Avenida Duarte Pacheco
+38.71618535740595,-9.172740874818505,attraction,Chafariz da Meia-laranja
+38.71192429093193,-9.140835619612856,attraction,Chafariz do Largo do Carmo
+38.705444800077466,-9.16140575309117,attraction,Chafariz das Janelas Verdes
+38.713208003105294,-9.1472461440658,attraction,Chafariz da Rua de O Século
+38.731783689229026,-9.154543105244535,attraction,Espelho de Água
+38.69606969004561,-9.206019535358775,attraction,Fonte Monumental de Belém
+38.694702700003,-9.215639600000667,attraction,Chafariz da Praia de Belém
+38.69488844999987,-9.215634250000026,attraction,Chafariz da Princesa
+38.775463829126934,-9.164331273847676,attraction,Chafariz do Lumiar
+38.72064413381774,-9.134929200047678,attraction,Taça-bebedoura
+38.76879932945872,-9.106315384671536,attraction,Chafariz do Rossio dos Olivais
+38.785740499999605,-9.142389650003963,attraction,Chafariz da Quinta Alegre
+38.76547553331332,-9.095932144346579,attraction,Vulcão de Água
+38.76418474276085,-9.096037876033764,attraction,Vulcão de água
+38.768416599812745,-9.092876950099,attraction,Sala Tejo
+38.7684679289325,-9.093871195110317,attraction,MEO Arena
+38.71377884404865,-9.139351208214084,attraction,Praça Dom Pedro IV
+38.737684,-9.1592473,station,Praça de Espanha
+38.7420882,-9.1689132,station,Jardim Zoológico
+38.7482497,-9.1730362,station,Laranjeiras
+38.74989540000001,-9.1797946,station,Alto dos Moinhos
+38.759228500000006,-9.1927134,station,Carnide
+38.6961785,-9.1974476,station,Belém
+38.767802399999994,-9.0990715,station,Lisboa - Oriente
+38.74023969999999,-9.1666658,station,Sete Rios
+38.7315082,-9.168862,station,Campolide-A
+38.7949698,-9.0997993,station,Sacavém
+38.7164357,-9.1315478,station,Graça
+38.7166242,-9.1323473,station,Rua dos Lagares
+38.73903140000001,-9.1087569,station,Marvila
+38.747091,-9.1028003,station,Braço de Prata
+38.70235490000001,-9.1740244,station,Alcântara-Mar
+38.69837960000001,-9.2293871,station,Algés
+38.70741060000001,-9.1732676,station,Alcântara-Terra
+38.7456858,-9.1355067,station,Roma-Areeiro
+38.7146298,-9.1220425,station,Lisboa - Santa Apolónia
+38.7145909,-9.1418412,station,Lisboa - Rossio
+38.7325092,-9.1677396,station,Campolide
+38.7443704,-9.1996245,station,Benfica
+38.7629244,-9.1040544,station,Cabo Ruivo
+38.75482499999999,-9.1138702,station,Chelas
+38.74753539999999,-9.1176623,station,Bela Vista
+38.7394653,-9.1239461,station,Olaias
+38.75340280000001,-9.1892731,station,Colégio Militar/Luz
+38.71901940000002,-9.1448139,station,Avenida
+38.7201029,-9.1548389,station,Rato
+38.7411145,-9.1467836,station,Campo Pequeno
+38.7515195,-9.1590395,station,Cidade Universitária
+38.7729284,-9.1592549,station,Lumiar
+38.779605,-9.1594573,station,Ameixoeira
+38.7470462,-9.1482017,station,Entrecampos
+38.7136899,-9.1224537,station,Santa Apolónia
+38.72445141420034,-9.149503285955262,station,Marquês de Pombal
+38.70499196619343,-9.14559590494875,station,Terminal Fluvial do Cais do Sodré
+38.706844592937514,-9.133403366076413,station,Terminal Fluvial do Terreiro do Paço
+38.76017051608372,-9.15786974929253,station,Campo Grande
+38.69497675110423,-9.198533481593028,station,Estação Fluvial de Belèm
+38.73415021185582,-9.153369195307558,station,São Sebastião
+38.76167426405361,-9.198031480676848,station,Interface da Pontinha
+38.74708676782076,-9.213648643728984,station,Santa Cruz-Damaia
+38.710206570007976,-9.126378998814285,station,Terminal de Cruzeiros de Lisboa
+38.70702492103961,-9.134475390287399,station,Terreiro do Paço
+38.71535161764611,-9.141653288992558,station,Restauradores
+38.7684906116895,-9.128299781969336,station,Aeroporto
+38.71046169766177,-9.140281158250108,station,Baixa-Chiado
+38.714020220910434,-9.13799997307385,station,Rossio
+38.71737864250539,-9.135879535675993,station,Martim Moniz
+38.72316585336222,-9.135242437516064,station,Intendente
+38.737100578473274,-9.133081384290511,station,Alameda
+38.727018698323405,-9.134856492822673,station,Anjos
+38.732701223412896,-9.134296376764325,station,Arroios
+38.75997396319877,-9.166421912405088,station,Telheiras
+38.706723042902375,-9.13401729968635,station,Estação Fluvial Sul e Sueste
+38.74795802714207,-9.141216183077056,station,Roma
+38.70614972649474,-9.146826876060903,station,Cais do Sodré
+38.75315537567902,-9.144005733286189,station,Alvalade
+38.74223279205842,-9.133484238829846,station,Areeiro
+38.71344119474438,-9.15918676524449,station,Estrela
+38.70941323452233,-9.153948074619201,station,Santos
+38.76735859470748,-9.155545932700589,station,Quinta das Conchas
+38.7603394661049,-9.204519321396733,station,Alfornelos
+38.76223281439491,-9.196845551522415,station,Pontinha
+38.71042825292229,-9.166205611666715,station,Infante Santo
+38.71768031359323,-9.165330457929006,station,Campo de Ourique
+38.7249353244049,-9.160011660411758,station,Campolide-Amoreiras
+38.70688343742155,-9.175300369547958,station,Alcântara
+38.734948714779456,-9.144613827212764,station,Saldanha
+38.73041459354285,-9.146877155430378,station,Picoas
+38.775080483364306,-9.115528897002317,station,Encarnação
+38.77490849850419,-9.103004877427198,station,Moscavide
+38.768008311578534,-9.099826270539298,station,Oriente
+38.76092041964979,-9.111804051398533,station,Olivais
+38.77341444603033,-9.09141618012702,station,Norte
+38.76239892852402,-9.092306960556494,station,Sul
+38.72876442628261,-9.15016036183755,station,Parque
+38.74290769552686,-9.172138432646685,station,Teleférico
+38.759729492355476,-9.15889974386308,bus_station,Terminal Rodoviário do Campo Grande
+38.74175742809756,-9.166249913778108,bus_station,Terminal Rodoviário de Sete Rios
+38.69891963600217,-9.227548572624851,bus_station,Terminal de Algés
+38.76791046064335,-9.100625745813563,bus_station,Estação Rodoviária de Lisboa-Oriente
+38.77658754861293,-9.182389244778646,industrial,Depósito Municipal de Viaturas Abandonadas
+38.69869574542802,-9.17402963301135,industrial,Porto de Lisboa - Terminal de Passageiros de Alcântara
+38.78040049239773,-9.166555080601816,industrial,Subestação Carriche
+38.77240779518411,-9.14753361488011,industrial,Carris - Estação de Recolha da Alta de Lisboa
+38.786524125110226,-9.098401269509246,industrial,Espaço Nascente da Junta de Freguesia do Parque das Nações
+38.79200541104014,-9.102655843695828,industrial,Tintas Dyrup Sacavem
+38.702498540915364,-9.161793800988468,industrial,Ponte Móvel da Rocha do Conde d'Óbidos
+38.756861544476905,-9.112028238819697,industrial,Carris - Estação de Recolha de Cabo Ruivo
+38.72992469600533,-9.10663223458528,industrial,Porto de Lisboa
+38.700666714431605,-9.173301129545791,industrial,Liscont
+38.771813445515036,-9.178345381256165,industrial,IAPMEI - Campus do Lumiar
+38.7969434716943,-9.104213095596185,industrial,Aqueduto do Tejo
+38.78535735942056,-9.10318207227349,industrial,Subestação de Sacavém
+38.70362339676068,-9.159318495175661,industrial,Estaleiro da Rocha do Conde de Óbidos
+38.700101652840004,-9.167683419074832,industrial,Porto de Lisboa - Terminal de Contentores de Alcântara
+38.70166745458103,-9.160520477577213,industrial,Porto de Lisboa - Terminal de Passageiros da Rocha do Conde de Óbidos
+38.70153002671769,-9.179645865121229,industrial,Carris - Estação de Recolha de Eléctricos de Santo Amaro
+38.75540867019484,-9.096256026797457,industrial,Repsol
+38.76171641053964,-9.194999291706264,industrial,Carris - Estação de Recolha da Pontinha
+38.7099490590925,-9.210566276674959,industrial,Posto de Limpeza de Belém
+38.722339185164806,-9.163688123178515,industrial,Reservatório de Campo de Ourique
+38.71332284202497,-9.17640675487126,industrial,Antiga Fábrica da Pólvora
+38.79131811491657,-9.146785327037822,industrial,Posto de Cloragem da Charneca
+38.75283759542726,-9.214811749575452,industrial,Subestação da Venda Nova (Amadora)
+38.7763382965657,-9.128036511249094,industrial,TAP Air Portugal
+38.76467066910549,-9.183780092314395,industrial,Lispolis
+38.74981054889792,-9.129978742782216,industrial,Subestação Gago Coutinho
+38.72695929564997,-9.189088301141952,industrial,Torre de comunicações Altice Portugal
+38.79541994714945,-9.139115631212107,industrial,Quinta de Santa Rosa
+38.765773423814586,-9.169128986818304,industrial,Reservatório de Telheiras
+38.72883121564919,-9.160309074363745,industrial,Reservatório do Pombal
+38.763886615204626,-9.115733323966445,industrial,Reservatório do Contador-Mor
+38.77104125667619,-9.106082277714526,industrial,Recolha Residuos Solidos - Lisboa
+38.74753412108156,-9.157511492314418,industrial,Subestação Norte
+38.703945037133686,-9.174286514495412,industrial,Estação Elevatória de Alcântara
+38.78534678712059,-9.169351776625437,industrial,Subestação Senhor Roubado
+38.778238071409525,-9.153574190454057,industrial,Subestação Alto do Lumiar
+38.76777232678838,-9.163966209977502,industrial,Subestação Telheiras
+38.70722560906077,-9.203190524946436,industrial,Posto de Limpeza do Restelo
+38.78110195638269,-9.092820581815594,industrial,Estação Elevatória Robinson Crusoe
+38.74367745819812,-9.103426664339382,industrial,Subestação Marvila
+38.723745898958526,-9.146484531905898,industrial,Subestação Santa Marta
+38.72054094869768,-9.212365390064734,industrial,Subestação do Zambujal
+38.69586795777029,-9.194480194773533,industrial,Subestação Central Tejo
+38.71233986120691,-9.161849641377616,industrial,Subestação de São Ciro
+38.782665724859385,-9.099125436142142,industrial,Central de Trigeração da Climaespaço
+38.7801889099242,-9.165981997312713,industrial,Posto de Corte de Carriche
+38.79362749852912,-9.105022184863376,industrial,Posto de Cloragem de Sacavém
+38.77981616781601,-9.173241952116623,industrial,Ecocentro do Lumiar
+38.775756503549616,-9.1253995874031,industrial,IPMA - Instituto Português do Mar e da Atmosfera
+38.77455711262982,-9.124890740298879,industrial,NAV Portugal - Navegação Aérea de Portugal
+38.72231462632941,-9.159254913058653,industrial,Reservatório das Amoreiras
+38.75533120000234,-9.161346399992276,industrial,Poço de Ventilação
+38.710340867088064,-9.192765292130838,industrial,Posto de Limpeza da Ajuda

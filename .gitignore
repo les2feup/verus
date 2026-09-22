@@ -7,6 +7,10 @@
 *.geojson
 *.csv
 
+# Experiment inputs are tracked
+!data/**/*.csv
+!data/**/*.geojson
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
