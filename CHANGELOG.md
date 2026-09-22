@@ -9,7 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added (Unreleased)
 
+-   Experiment inputs are tracked in `data/`: POTI datasets (Porto, Lisbon, Paris), the article's time-window table, the continuous-occupancy time-window table (`time_windows_continuous_occupancy.csv`, named T1g in the multi-domain analysis) with its scenarios (`scenarios_activity_regimes.csv`), and the city boundaries. The article's experiments are tagged `ijdrr-article`.
+
+### Changed (Unreleased)
+
+-   **Experiment notebooks (`notebooks/experiments/01-03`) use the multi-domain analysis setup** (changes results): continuous-occupancy time-window table, four scenarios (Mon 08:30, Mon 11:00, Mon 21:00, Sat 11:00), a 100 m grid over the boundaries in `data/cities/`, and a static `max_vulnerability` per city equal to the largest raw vulnerability over the four scenarios. Maps are static images over CARTO Voyager tiles (`CARTO_API_KEY` environment variable) instead of folium maps, which kept the notebooks small.
+
 ### Fixed (Unreleased)
+
+-   README usage example referred to an undefined `tw_gen`.
 
 ## [1.1.1] - 2026-09-21
 

@@ -32,11 +32,17 @@ pip install verus
 
 ## Reproducing Results
 
-To reproduce the results from the latest article, run the following Jupyter Notebooks:
+The experiment notebooks read their inputs from [data/](./data/). They use a continuous-occupancy
+time-window table (every category stays active between its peaks), a 100 m hexagonal grid and four
+scenarios, one per activity regime of the week (weekday morning rush, weekday late morning, weekday night,
+Saturday daytime):
 
 -   [Porto, Portugal](./notebooks/experiments/01-Porto.ipynb)
 -   [Lisbon, Portugal](./notebooks/experiments/02-Lisbon.ipynb)
 -   [Paris, France](./notebooks/experiments/03-Paris.ipynb)
+
+To reproduce the results of the IJDRR article (2025), check out the git tag `ijdrr-article`, which has the
+article's notebooks, time windows and 250 m grid.
 
 ## Basic Usage
 
@@ -68,7 +74,7 @@ assessor.load(
 )
 
 # Perform assessment and get results
-evaluation_time = tw_gen.to_unix_epoch("2023-11-06 17:30:00")
+evaluation_time = twg.to_unix_epoch("2023-11-06 17:30:00")
 results = assessor.run(evaluation_time=evaluation_time)
 
 # Visualize results

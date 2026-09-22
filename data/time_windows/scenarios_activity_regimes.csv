@@ -1,0 +1,5 @@
+scenario,regime,evaluation_time
+s1,Weekday morning rush,2023-11-06 08:30:00
+s2,Weekday late morning,2023-11-06 11:00:00
+s3,Weekday night,2023-11-06 21:00:00
+s4,Saturday daytime,2023-11-11 11:00:00
