@@ -78,10 +78,9 @@ def test_inactive_category_does_not_keep_previous_vi(data):
     assessor.run(evaluation_time=T1)
     result = assessor.run(evaluation_time=T2)
 
-    vi = result["input_data"].groupby("category")["vi"].unique()
-    assert list(vi["a"]) == [0.0]
-    assert list(vi["b"]) == [0.5]
-    assert list(vi["c"]) == [0.0]
+    used = result["input_data"]
+    assert set(used["category"]) == {"b"}
+    assert list(used["vi"].unique()) == [0.5]
 
 
 def test_sequential_runs_match_fresh_runs(data):
@@ -104,11 +103,11 @@ def test_sequential_runs_match_fresh_runs(data):
 def test_time_windows_apply_to_passed_data_source(data):
     potis, _, _ = data
     assessor = _assessor(data)
-    subset = potis[potis["category"] != "c"].assign(vi=0.0)
+    subset = potis[potis["category"] != "c"].iloc[::2].assign(vi=0.0)
 
     result = assessor.run(data_source=subset, evaluation_time=T2)
 
     used = result["input_data"]
-    assert set(used["category"]) == {"a", "b"}
-    assert len(used) == len(subset)
-    assert list(used.groupby("category")["vi"].unique()["b"]) == [0.5]
+    assert set(used["category"]) == {"b"}
+    assert len(used) == (subset["category"] == "b").sum()
+    assert list(used["vi"].unique()) == [0.5]

@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed (Unreleased)
 
+-   **Only POTIs active at the evaluation time are clustered** (changes results): with time windows loaded, `run()` now passes only the POTIs with `vi > 0` to the OPTICS → K-means pipeline, as `GeOPTICS` does when it receives time windows. Before, `VERUS` called `GeOPTICS.run()` without time windows, so OPTICS clustered every POTI and found the same clusters at every evaluation time, and inactive POTIs counted in the number of POTIs that divides the vulnerability kernel of their cluster, diluting it. This behavior dates from the first version of the pipeline, so the IJDRR article's results and verus 1.1.1 results are affected. `run()` now returns an error when no POTI is active at the evaluation time, and `input_data` holds only the active POTIs. Regression tests in `test/test_active_clustering.py`.
+-   The fallback K-means (when OPTICS finds fewer than two clusters) no longer asks for more clusters than there are POTIs.
 -   README usage example referred to an undefined `tw_gen`.
 
 ## [1.1.1] - 2026-09-21

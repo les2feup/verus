@@ -973,7 +973,10 @@ class VERUS(Logger):
                 level="warning",
             )
             kmeans = KMeansHaversine(
-                n_clusters=8, init="k-means++", verbose=self.verbose, random_state=42
+                n_clusters=min(8, len(df)),
+                init="k-means++",
+                verbose=self.verbose,
+                random_state=42,
             )
             # Remove all problematic parameters
             kmeans_results = kmeans.run(
@@ -1117,7 +1120,9 @@ class VERUS(Logger):
                 - "clusters": DataFrame with cluster assignments
                 - "centroids": DataFrame with cluster centers
                 - "map": Interactive map (if area_boundary_path was provided)
-                - "input_data": POTI DataFrame with updated vulnerability indices
+                - "input_data": POTI DataFrame with updated vulnerability indices.
+                  With time windows loaded, only the POTIs active at evaluation_time
+                  (vi > 0) are clustered and returned.
                 - "place_name": Name of the analyzed place
                 - "labels", "inertia", "n_iter": Additional clustering information
                 - "vulnerability_zones": GeoDataFrame with vulnerability zones
@@ -1167,6 +1172,20 @@ class VERUS(Logger):
                     level="info",
                 )
                 df = self._apply_time_windows_to_potis(evaluation_time, potis_df=df)
+
+                # Cluster only the POTIs active at the evaluation time, as GeOPTICS
+                # does with time windows: inactive POTIs (vi = 0) would otherwise fix
+                # the OPTICS clusters and dilute the kernel of their cluster.
+                n_total = len(df)
+                df = df[df["vi"] > 0].reset_index(drop=True)
+                self.log(
+                    f"{len(df)} of {n_total} POTIs active at evaluation time",
+                    level="info",
+                )
+                if df.empty:
+                    raise ValueError(
+                        f"No POTIs active at evaluation time {evaluation_time}"
+                    )
 
             # --- Execute the clustering pipeline (OPTICS -> KMeans) ---
             clusters_results = self._run_clustering_pipeline(
